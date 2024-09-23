@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tickets</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      .ticket {
+        background-color: #ffffff;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .ticket a {
+        text-decoration: none;
+        color: #0078d4;
+        font-weight: bold;
+      }
+      .ticket a:hover {
+        text-decoration: underline;
+      }
+      .ticket-section {
+        margin-top: 70px;
+        /* Adjust this value based on the height of your sticky menu */
+      }
+      .sticky-menu {
+        position: sticky;
+        top: 0;
+        background-color: #ffffff; /* Background color for visibility */
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+        z-index: 1000; /* Ensure it stays above other content */
+        display: flex;
+        justify-content: space-around; /* Space out items evenly */
+      }
+
+      .ticket {
+        margin: 0; /* Remove margin for a cleaner look */
+      }
+
+      .ticket a {
+        text-decoration: none;
+        color: #0078d4;
+        font-weight: bold;
+      }
+
+      .ticket a:hover {
+        text-decoration: underline;
+      }
+      .sticky-menu {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .ticket-row {
+        display: flex;
+        justify-content: space-around; /* Adjusts space between tickets */
+        margin-bottom: 10px; /* Space between rows */
+      }
+
+      .ticket {
+        flex: 1; /* Each ticket takes equal space */
+        text-align: center; /* Center text */
+      }
+
+      .ticket a {
+        text-decoration: none; /* Remove underline from links */
+        padding: 10px; /* Add padding for clickable area */
+        display: block; /* Makes the whole area clickable */
+        background-color: #f0f0f0; /* Background color for tickets */
+        border-radius: 5px; /* Rounded corners */
+        transition: background-color 0.3s; /* Smooth background transition */
+      }
+
+      .ticket a:hover {
+        background-color: #d0d0d0; /* Background color on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sticky-menu">
+      <div class="ticket-row">
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket1')"
+            >Payment Confirmation</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket2')"
+            >Credit</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket3')"
+            >Refund</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket4')"
+            >Missing Discount</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket5')"
+            >Resolution Payment</a
+          >
+        </div>
+      </div>
+      <div class="ticket-row">
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket6')"
+            >Billing Date Change</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket7')"
+            >DPA Failed</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket8')"
+            >Direct Debit Change</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket9')">CPI</a>
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket10')">DCA</a>
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket11')"
+            >Proof Of Payment</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket12')"
+            >Final Bill</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket13')"
+            >Call Plan Change</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="ticket-section" id="ticket1">
+      <br /><br />
+      <h2>Ticket #1: Payment Confirmation</h2>
+      <p>
+        <b
+          ><center><h2>E-Receipt: Payment Confirmation</h2></center></b
+        ><br /><br />
+
+        Thank you for contacting Plusnet today.<br /><br />
+
+        Following our conversation, I am pleased to confirm that we have
+        successfully processed the outstanding payment on your account. The
+        outstanding balance has now been cleared, and any account restrictions
+        will be lifted within the next 4 hours.<br /><br />
+
+        You can login to your account to review your details by clicking
+        https://www.plus.net/member-centre/login<br /><br />
+
+        If you have further questions, give our team a call on 0330 123 9123 or
+        0345 140 0200.
+      </p>
+    </div>
+    <div class="ticket-section" id="ticket2">
+      <h2>Ticket #2: Credit</h2>
+      <p>
+        <b
+          ><center><h1>Credit</h1></center></b
+        ><br /><br />
+
+        Thank you for contacting Plusnet today.<br /><br />
+
+        I am sorry for the inconvenience this may have caused.<br /><br />
+
+        The details of your credit are as follows:<br /><br />
+        <b>
+          • Reason: Gesture of Goodwill / Incorrect Broadband Subscription
+          Charges<br /><br />
+          • Credit amount due: £AMOUNT<br /><br />
+        </b>
+        This credit will apply on your next bill, so you’ll see it reflected
+        there.<br /><br />
+
+        Thank you for your understanding!<br /><br /><br /><br />
+
+        You can login to your account to review your account details by clicking
+        https://www.plus.net/member-centre/login<br /><br />
+
+        If you have further questions, give our team a call on 0330 123 9123 or
+        0345 140 0200.<br /><br />
+      </p>
+    </div>
+    <div class="ticket-section" id="ticket3">
+      <h2>Ticket #3: Refund</h2>
+      <p>
+        <b
+          ><center><h1>Refund</h1></center></b
+        ><br /><br />
+
+        Thank you for contacting Plusnet today.<br /><br />
+
+        I am sorry for the inconvenience this may have caused.<br /><br />
+
+        The details of your refund are as follows:<br /><br />
+        <b>
+          • Reason: Incorrect Broadband Subscription Charges due to missing
+          discount<br /><br />
+          • Refund amount due: £AMOUNT<br /><br />
+        </b>
+        Please note that it can take up to 3-5 working days for a refund to be
+        reflected in your bank account after approval.<br /><br />
+
+        Thank you for your understanding!<br /><br /><br /><br />
+
+        You can log in to your account to review your account details by
+        clicking https://www.plus.net/member-centre/login.<br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />
+      </p>
+    </div>
+    <div class="ticket-section" id="ticket4">
+      <h2>Ticket #4: Missing Discount</h2>
+      <p>
+        <b
+          ><center><h1>Missing Discount</h1></center></b
+        ><br /><br />
+
+        Thank you for contacting Plusnet today.<br /><br />
+
+        I am sorry for the inconvenience this may have caused.<br /><br />
+
+        The discount has been applied to your account, and the difference from
+        your last bill will be automatically credited in next month’s
+        statement.<br /><br />
+
+        Your new monthly payable amount is <b>£AMOUNT</b>.<br /><br />
+
+        Thank you for your understanding!<br /><br /><br /><br />
+
+        You can log in to your account to review your account details by
+        clicking https://www.plus.net/member-centre/login.<br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />
+      </p>
+    </div>
+    <div class="ticket-section" id="ticket5">
+      <h2>Ticket #5: Resolution Payment</h2>
+      <p>
+        <b
+          ><center><h1>Resolution Payment</h1></center></b
+        ><br /><br />
+
+        Thank you for contacting Plusnet today.<br /><br />
+
+        I am sorry for the inconvenience this may have caused.<br /><br />
+
+        As discussed, I've applied a resolution payment to your account of £XXX
+        and this will be sent to you by cheque, in the next 3-5 working days
+        after approval.<br /><br />
+
+        This has been sent as a gesture of goodwill [reason for the gesture of
+        goodwill/complaint resolution and call summary]<br /><br />
+
+        Thank you for your understanding!<br /><br /><br /><br />
+
+        You can log in to your account to review your account details by
+        clicking https://www.plus.net/member-centre/login.<br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />
+
+        <b>**INTERNAL</b>
+        &lt;u&gt;Please Note:&lt;/u&gt; &lt;ul&gt; &lt;li&gt;Any account
+        restrictions will be lifted within the next 4 hours.&lt;/li&gt;
+        &lt;/ul&gt; &lt;u&gt;The details of your credit are as
+        follows:&lt;/u&gt;&lt;br /&gt;&lt;br /&gt; &lt;ul&gt;
+        &lt;li&gt;&lt;b&gt;Reason Code:&lt;/b&gt; Gesture of Goodwill /
+        Incorrect Broadband Subscription Charges&lt;/li&gt;&lt;br&gt;
+        &lt;li&gt;&lt;b&gt;Credit Amount:&lt;/b&gt; £AMOUNT&lt;/li&gt;
+        &lt;/ul&gt; &lt;u&gt;Please Note:&lt;/u&gt; This credit will apply on
+        your next bill, so you’ll see it reflected there.
+      </p>
+    </div>
+  </body>
+</html>
