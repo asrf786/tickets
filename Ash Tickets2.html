@@ -10,9 +10,8 @@
         background-color: #f4f4f4;
         margin: 0;
         padding: 20px;
-
       }
-      h1 {
+      h2 {
         text-align: center;
         color: #333;
       }
@@ -20,8 +19,9 @@
         background-color: #ffffff;
         /* padding: 15px; */
         margin: 10px 5px;
-        border-radius: 5px;
+        border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgb(230, 233, 233);
       }
       .ticket a {
         text-decoration: none;
@@ -30,6 +30,8 @@
       }
       .ticket a:hover {
         text-decoration: underline;
+        border-radius: 10px;
+        color: black;
       }
       .ticket-section {
         display: none; /* Hide all ticket sections by default */
@@ -38,56 +40,800 @@
         padding: 15px;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: 1px solid black;
       }
       .sticky-menu {
         position: sticky;
         top: 0;
-        
+
         background-color: #ffffff;
         padding: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         z-index: 1000;
-        display: flex;
         justify-content: space-around;
         display: flex;
         flex-direction: column;
         border-radius: 5px;
-}
+      }
 
-.ticket-row {
-  display: flex;
-  
-  justify-content: space-between; /* Adjusts space between tickets */
-  /* margin-bottom: 10px; Space between rows */
-}
+      .ticket-row {
+        display: flex;
 
-.ticket {
-  flex: 1; /* Each ticket takes equal space */
-  text-align: center; /* Center text */
-}
+        justify-content: space-between; /* Adjusts space between tickets */
+        /* margin-bottom: 10px; Space between rows */
+      }
 
-.ticket a {
-  text-decoration: none; /* Remove underline from links */
-  padding: 10px; /* Add padding for clickable area */
-  display: block; /* Makes the whole area clickable */
-  /* background-color: #f0f0f0; Background color for tickets */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s; /* Smooth background transition */
-}
+      .ticket {
+        flex: 1; /* Each ticket takes equal space */
+        text-align: center; /* Center text */
+      }
 
-.ticket a:hover {
-  background-color: #d0d0d0; /* Background color on hover */
-}
-footer {
-    background-color: #f1f1f1; /* Normal footer color */
-  text-align: center;
-  padding: 10px 0;
-  margin-top: auto; /* This ensures the footer stays at the bottom */
-  position: relative;
-}
+      .ticket a {
+        text-decoration: none; /* Remove underline from links */
+        padding: 10px; /* Add padding for clickable area */
+        display: block; /* Makes the whole area clickable */
+        border-radius: 5px; /* Rounded corners */
+        transition: background-color 0.3s; /* Smooth background transition */
+      }
 
-
+      .ticket a:hover {
+        background-color: #d0d0d0; /* Background color on hover */
+      }
+      footer {
+        background-color: #f0f0f0; /* Normal footer color */
+        text-align: center;
+        padding: 10px 0;
+        margin-top: auto; /* This ensures the footer stays at the bottom */
+        position: relative;
+      }
     </style>
+  </head>
+  <body>
+    <div class="sticky-menu">
+      <div class="ticket-row">
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket1')"
+            >Payment Taken</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket2')"
+            >Credit</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket3')"
+            >Refund</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket20')"
+            >Auto Compensation</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket4')"
+            >Discount Added</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket5')"
+            >Resolution Payment</a
+          >
+        </div>
+
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket7')"
+            >DPA Failed</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket12')"
+            >Final Bill</a
+          >
+        </div>
+      </div>
+      <div class="ticket-row">
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket8')"
+            >Direct Debit Change</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket6')"
+            >Bill Date Change</a
+          >
+        </div>
+
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket13')"
+            >Call Plan Change</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket11')"
+            >Proof Of Payment</a
+          >
+        </div>
+
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket10')"
+            >DCA Contact Details</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket9')"
+            >CPI 2024</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket23')"
+            >Return Router</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket21')"
+            >Access Account</a
+          >
+        </div>
+      </div>
+      <div class="ticket-row">
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket14')"
+            >Remove Restriction</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket15')"
+            >Transfer To COT / Tech</a
+          >
+        </div>
+
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket16')"
+            >Call Listening Templates</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket17')"
+            >Reward Card Email</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket19')"
+            >Blackhack Contact</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket18')"
+            >Manager Escalation</a
+          >
+        </div>
+
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket22')"
+            >Opening Complaint</a
+          >
+        </div>
+
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket24')"
+            >Set Callback</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="ticket-section" id="ticket1">
+      <h2><center>Payment Confirmation</center></h2>
+      <p>
+        <br /><br />
+
+        Thank you for contacting Plusnet today.<br /><br />
+
+        Following our conversation, I am pleased to confirm that we have
+        successfully processed the outstanding payment on your account. The
+        outstanding balance has now been cleared.<br /><br />
+
+        <u>Please Note:</u><br /><br />
+        • Any account restrictions will be lifted within the next 4 hours.<br /><br /><br />
+
+        You can log in to your account to review your details by clicking
+        https://www.plus.net/member-centre/login<br /><br />
+
+        If you have further questions, give our team a call on 0330 123 9123 or
+        0345 140 0200.
+      </p>
+    </div>
+
+    <div class="ticket-section" id="ticket2">
+      <h2><center>Credit</center></h2>
+      <p>
+        <br />
+        Thank you for contacting Plusnet today.<br /><br />
+
+        I am sorry for the inconvenience this may have caused.<br /><br />
+
+        <u>The details of your credit are as follows:</u><br /><br />
+
+        • <b>Reason Code:</b> Gesture of Goodwill / Incorrect Broadband
+        Subscription Charges<br />
+        • <b>Credit Amount:</b> £AMOUNT<br /><br />
+
+        <u>Please Note:</u> <br /><br />
+        This credit will apply to your next month's bill, so you’ll see it
+        reflected there.<br /><br />
+
+        Thank you for your understanding!<br /><br /><br /><br />
+
+        You can log in to your account to review your account details by
+        clicking https://www.plus.net/member-centre/login<br /><br />
+
+        If you have further questions, give our team a call on 0330 123 9123 or
+        0345 140 0200.<br /><br />
+      </p>
+    </div>
+
+    <div class="ticket-section" id="ticket3">
+      <h2><center>Refund</center></h2>
+      <p>
+        <br />
+        Thank you for contacting Plusnet today.<br /><br />
+
+        I am sorry for the inconvenience this may have caused.<br /><br />
+
+        <u>The details of your refund are as follows:</u><br /><br />
+        • <b>Reason Code:</b> Incorrect Broadband Subscription Charges Due To
+        Missing Discount<br />
+        • <b>Refund Amount:</b> £AMOUNT<br /><br />
+
+        <u>Please note:</u> <br /><br />
+        It can take up to 3-5 working days for a refund to be reflected in your
+        bank account after approval.<br /><br />
+
+        Thank you for your understanding!<br /><br /><br /><br />
+
+        You can log in to your account to review your account details by
+        clicking https://www.plus.net/member-centre/login.<br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br /><br /><br />
+
+        <u><b>** INTERNAL **</b> Monthly Breakdown of Overcharged:</u
+        ><br /><br />
+        2024<br />
+        • January: £AMOUNT<br />
+        • February: £AMOUNT<br />
+        • March: £AMOUNT<br />
+        • April: £AMOUNT<br />
+        • May: £AMOUNT<br />
+        • June: £AMOUNT<br />
+        • July: £AMOUNT<br />
+        • August: £AMOUNT<br />
+        • September: £AMOUNT<br />
+        • October: £AMOUNT<br />
+        • November: £AMOUNT<br />
+        • December: £AMOUNT<br /><br />
+        • <b>Grand Total: £AMOUNT</b><br /><br />
+      </p>
+    </div>
+
+    <div class="ticket-section" id="ticket4">
+      <h2><center>Missing Discount</center></h2>
+      <p>
+        <br />
+        Thank you for contacting Plusnet today.<br /><br />
+
+        I am sorry for the inconvenience this may have caused.<br /><br />
+
+        The discount has been applied to your account, and your monthly payable
+        amount is now: <b>£AMOUNT</b><br /><br />
+
+        <u>Please note:</u><br /><br />
+        • The overcharge for this month due to the missing discount will be
+        automatically adjusted on your next month's bill, as the next month's
+        pro-rata discount bill will generate.<br /><br />
+
+        Thank you for your understanding!<br /><br /><br /><br />
+        You can log in to your account to review your account details by
+        clicking https://www.plus.net/member-centre/login.<br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />
+      </p>
+    </div>
+
+    <div class="ticket-section" id="ticket5">
+      <h2><center>Resolution Payment Cheque</center></h2>
+      <p>
+        <br />
+        Thank you for contacting Plusnet today.<br /><br />
+
+        I am sorry for the inconvenience this may have caused.<br /><br />
+
+        As discussed, I've applied a resolution payment of <b>£XXX</b> to your
+        account, and this will be sent to you by cheque within the next 3-5
+        working days after approval.<br /><br />
+
+        This payment has been issued as a gesture of goodwill due to
+        <b>reason_for_the_gesture_of_goodwill</b
+        ><br /><br /><br /><br /><br /><br />
+      </p>
+    </div>
+    <div class="ticket-section" id="ticket6">
+      <h2><center>Billing Date Change</center></h2>
+      <p>
+        Thank you for contacting Plusnet today.<br /><br />
+        Following our conversation, I am pleased to confirm that we have
+        successfully <b>changed the billing date</b> as requested. Below are the
+        details:<br />
+        <br />
+        <b>• New Billing Date:</b> XX<br /><br />
+        <b>• New Direct Debit Date:</b> XX (As direct debit is always set 7 days
+        after the billing date)<br />
+        <br />
+        <u>Please note</u>:<br /><br />
+        • If your next bill is a little higher or lower than normal, this will
+        be due to pro-rata charges and is nothing to be concerned about.<br />
+        • If you decide to change your bill date again, you will need to wait 4
+        months to do so.<br />
+        <br />
+        Thank you for your understanding!<br /><br />
+
+        You can log in to your account to review your account details by
+        clicking https://www.plus.net/member-centre/login<br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />
+      </p>
+    </div>
+
+    <div class="ticket-section" id="ticket7">
+      <h2><center>Failed DPA</center></h2>
+      <p>
+        <br />Thank you for contacting Plusnet today. I am sorry for the
+        inconvenience this may have caused.<br /><br />
+
+        Unfortunately, we are unable to provide any account-specific information
+        as you have not met our security requirements.<br /><br />
+
+        <b
+          >Please provide at least 2 of the following pieces of security
+          information:</b
+        ><br /><br />
+        1. Username<br />
+        2. Two random characters from your Login Password<br />
+        3. Answer to your Security Question (if applicable)<br />
+        4. If you have Direct Debit: Last 2 digits of your Sort Code and the
+        last 3 digits of your Bank Account Number; otherwise, provide the last 4
+        digits of your card number and the expiry date (if active payment
+        method)<br />
+        5. Your Full Address with Landline Number<br /><br />
+
+        Due to the Data Protection Act 2018, we cannot discuss your account with
+        anyone other than the account holder. We understand this may be
+        frustrating, but this policy is in place to protect your information
+        from misuse.<br /><br />
+
+        Thank you for your understanding!<br /><br />
+
+        You can reset your login password by clicking
+        https://www.plus.net/member-centre/forgot-password/<br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />
+      </p>
+    </div>
+
+    <div class="ticket-section" id="ticket8">
+      <h2><center>Direct Debit Change</center></h2>
+      <p>
+        <br />Thank you for updating your payment method while speaking with
+        Plusnet today.<br /><br />
+
+        I am pleased to inform you that we have successfully changed your Direct
+        Debit using the details you provided. <br /><br />
+
+        <u>Please note:</u><br /><br />
+        • The instructions will be sent to your bank within 24 hours.<br />
+        • This process can take up to 3 working days to become active.<br />
+        • Once active, your new details will be used for all future payments.<br />
+        • Your old payment method has been automatically removed from our
+        system.<br /><br />
+
+        You can log in to your account to review your account details by
+        clicking https://www.plus.net/member-centre/login.<br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />
+      </p>
+    </div>
+    <div class="ticket-section" id="ticket9">
+      <h2><center>Consumer Price Index (CPI) 2024</center></h2>
+      <p>
+        Thank you for contacting Plusnet today.<br /><br />
+
+        As discussed, the Consumer Price Index (CPI) is a recognised measure of
+        inflation that tracks the average increase in prices for consumers and
+        businesses across the country over the last 12 months.<br /><br />
+
+        All accounts in scope will have an increase applied after 31st March
+        2024 based on the December CPI rate of 4.00% + 3.90%, resulting in a
+        total increase of 7.9% as announced by the Office for National
+        Statistics.<br /><br />
+
+        I'm sorry to hear that you are not happy with the recent price rise.<br /><br />
+
+        Unfortunately, this is due to company policy, and I am unable to prevent
+        this from happening.<br /><br />
+
+        Thank you for your understanding!<br /><br />
+      </p>
+      <p>
+        <b>CPI Figure:</b><br /><br />
+        CPI of 2023 was 14.4%.<br />
+        CPI of 2024 is 7.9%.<br />
+      </p>
+      You can log in to your account to review your account details by clicking
+      https://www.plus.net/member-centre/login.<br /><br />
+
+      If you have further questions, please give our team a call at 0330 123
+      9123 or 0345 140 0200.<br /><br />
+    </div>
+    <div class="ticket-section" id="ticket10">
+      <h2><center>Account Sent to Debt Collection Agency</center></h2>
+      <p>
+        Thank you for contacting Plusnet today.<br /><br />
+
+        I am sorry to inform you that your account has been sent to a collection
+        agency due to outstanding payments.<br /><br />
+
+        <u>Please find the relevant information about Debt Collection Agency:</u
+        ><br /><br />
+        <b>• Agency Name:</b> EP Financial Solutions (previously known as Arvato
+        Ltd)<br /><br />
+        <b>• Contact Number:</b> 0344 571 4030<br /><br />
+        <b>• Website:</b> https://pay.myepfs.com/<br /><br />
+
+        If you have any questions or concerns regarding your payment plan,
+        please feel free to reach out to EP Financial Solutions directly.<br /><br />
+        <u>Please Note:</u> <br /><br />
+        • Once your payment is cleared with them or a payment plan has started,
+        please contact the Plusnet sales team to create a brand new account.<br /><br />
+
+        Thank you for your understanding.<br /><br />
+      </p>
+    </div>
+    <div class="ticket-section" id="ticket11">
+      <h2 style="text-align: center">Proof of Payment Required</h2>
+      <p>
+        Thank you for contacting Plusnet. I am sorry for any inconvenience
+        caused.<br /><br />
+
+        To help resolve your inquiry, please upload proof of the payment from
+        your bank account through our member center in the open questions or
+        tickets section.<br /><br />
+        You can view your open Questions here:
+        https://www.plus.net/wizard/?p=search.<br /><br />
+
+        <b>Please upload the following information:</b><br /><br />
+
+        • <b>Bank Statement:</b> A clear copy showing the payment, date, bank
+        account number, sort code, and account holder name. <br />A screenshot
+        or photo is acceptable if more convenient.<br /><br /><br />
+        <b>******** Please do not reply to this email. ********</b
+        ><br /><br /><br />
+
+        Please upload the document through our member center in the open
+        questions section, which you can directly view from here:
+        https://www.plus.net/wizard/?p=search. <br /><br />
+
+        Once we receive the proof, we will assist you within 48 working
+        hours.<br /><br />
+
+        Thank you for your cooperation!<br />
+      </p>
+    </div>
+
+    <div class="ticket-section" id="ticket12">
+      <h2 style="text-align: center">Final Bill</h2>
+      <p>
+        Thank you for contacting Plusnet. Your final bill will be generated 20
+        days after your account closure.
+        <br /><br />
+
+        <u>Details regarding Final Bill:</u><br /><br />
+        • Account closed on <b>XXXXXX</b>.<br />
+        • Final bill issued 20 days later.<br /><br />
+        • If you have any pending refunds, they will be processed via Direct
+        Debit if active.<br />
+        • If no active Direct Debit, you’ll receive an email to provide bank
+        details.<br />
+        • If the email link expires, a cheque will be automatically sent.<br /><br />
+
+        We appreciate your understanding!<br />
+      </p>
+    </div>
+
+    <div class="ticket-section" id="ticket13">
+      <h2><center>Call Plan Change</center></h2>
+      <p>
+        Thank you for contacting Plusnet today.<br /><br />
+
+        We would like to inform you that your call plan has been updated. Below
+        are the details regarding the changes:<br /><br />
+
+        <u>New Call Plan Information:</u><br /><br />
+        • Your call plan has been <b>changed</b> to
+        <b>NAME_OF_NEW_CALL_PLAN</b>.<br />
+        • The new call plan will take effect from your next billing date.<br />
+        • Your next billing date will be <b>XXXXXX</b>.<br /><br />
+
+        • Our call charges and plans in more detail on
+        https://www.plus.net/broadband/extras/call-plans/ and full tariff guide
+        on https://www.plus.net/help/legal/residential-phone-tariffs/<br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />
+      </p>
+    </div>
+
+    <div class="ticket-section" id="ticket14">
+      <h2>
+        <center>Remove Restriction Request (Debt managment enable)</center>
+      </h2>
+      <p>
+        Thank you for contacting Plusnet today.<br /><br />
+
+        As discussed, I have already assigned your account to the concerned
+        department to remove the restrictions on your account. <br /><br />
+
+        <u>Please Note:</u>
+        Any account restrictions will be lifted within the next 4 hours.<br /><br />
+
+        Thank you for your patience!<br /><br /><br /><br />
+
+        <b>** INTERNAL **</b><br /><br />
+
+        <b>Action Required:</b>
+        Please remove the splash screen restriction, as the customer is unable
+        to bypass it.<br /><br />
+
+        <b>Reason:</b>
+        The restriction was applied before the failed payment day 14.<br /><br />
+        The customer attempted to manually remove the restriction by selecting
+        'Click here to acknowledge and continue' or 'Click on remove restriction
+        temporarily,' but was unsuccessful.<br /><br />
+      </p>
+    </div>
+
+    <div class="ticket-section" id="ticket15">
+      <h2><center>Transfer to Retention / Tech / Early Life</center></h2>
+      <p>
+        Thank you for contacting Plusnet today.<br /><br />
+
+        As discussed, I have successfully transferred you to the concerned
+        department, who will assist you further.<br /><br />
+        <b>Department transferred to:</b> Retention / Technical<br /><br />
+        <b>Inquiry regarding:</b> XXXXXXX<br /><br />
+        <b>Data Protection:</b> Passed (Fully DPA) <br /><br /><br />
+
+        Thank you for your patience and understanding!<br /><br /><br />
+      </p>
+    </div>
+
+    <div class="ticket-section" id="ticket16">
+      <h2><center>Call Listening Request</center></h2>
+      <p>
+        Thank you for contacting Plusnet today.<br /><br />
+
+        As discussed, I have assigned your account to the Call Listening
+        Department for the call listening request. Please allow 3-5 working days
+        for this process to be completed. We will inform you as soon as the call
+        listening outcome is available.<br /><br />
+
+        Thank you for your cooperation!<br /><br /><br /><br />
+
+        <b>** INTERNAL **</b><br /><br />
+        <u>Call Listen Request:</u> <br /><br />
+        • SID : <br /><br />
+        • Advisor's Name : <br /><br />
+        • Number Calling From : <br /><br />
+        • Date & Approximate Time of Call : <br /><br />
+        • What are we looking for? : <br /><br />
+      </p>
+    </div>
+
+    <div class="ticket-section" id="ticket17">
+      <h2><center>Reward Card Email (pnetbillop@plus.net)</center></h2>
+      <p>
+        Thank you for contacting Plusnet today.<br /><br />
+
+        As discussed, I have forwarded your account to the Cashback Department.
+        Please allow 3-5 working days for this process to be completed. We will
+        notify you as soon as the outcome is available.<br /><br />
+
+        Thank you for your cooperation!<br /><br /><br />
+
+        <b>** INTERNAL **</b><br /><br />
+        Hello,<br /><br />
+
+        I have an escalation for a cash-back promotion offer. Here are the
+        details:<br /><br />
+        • Customer's SID :<br /><br />
+        • Promo Code :<br /><br />
+        • Reason for Escalation :<br /><br />
+        • Has the Albert/KBMS process been followed? Yes<br /><br />
+        • Has the Blackhawk portal been checked? Yes<br /><br />
+        • Action Required : Issue Reward Card<br /><br />
+        • My Team Leader's Name : <br /><br /><br />
+
+        Thank you!
+      </p>
+    </div>
+    <div class="ticket-section" id="ticket18">
+      <h2><center>Manager Escalation Request</center></h2>
+      <p>
+        Thank you for contacting Plusnet today. I am sorry for any inconvenience
+        this may have caused.<br /><br />
+
+        As discussed, I have raised the manager (supervisor) escalation who will
+        review your request and get back to you shortly.<br /><br />
+
+        Thank you for your cooperation!<br /><br /><br /><br />
+
+        <b>** INTERNAL **</b><br /><br />
+        <u>Manager Escalation Request :</u><br /><br />
+        • Customer Name :<br /><br />
+        • Contact Number :<br /><br />
+        • Date and Time :<br /><br />
+        • Reason for Escalation :<br /><br />
+      </p>
+    </div>
+    <div class="ticket-section" id="ticket19">
+      <h2><center>Blackhawk (Pure Card) Contact</center></h2>
+      <p>
+        Thank you for contacting Plusnet today.<br /><br />
+        I am sorry for any inconvenience this may have caused.<br /><br />
+
+        As discussed, please contact Blackhawk (Pure Card), and they will assist
+        you further with your reward card query. You can email or call them, and
+        a member of the team will be happy to help.<br /><br />
+
+        <u>Contact Information:</u><br /><br />
+        • <b>0344 800 6435</b><br />
+        • <b>0344 879 1069</b><br /><br />
+
+        • Phone lines are open from 8 AM to 8 PM, Monday to Sunday, excluding
+        Christmas, Boxing Day, and New Year's Day. Calls to this number are
+        charged at the same rate as 01 or 02 numbers on mobile phone tariffs.<br /><br />
+
+        <b>Email :</b>
+        info@purecard.com OR plusnet@purecard.com<br /><br />
+        The Blackhawk (Pure Card) team can assist you with the following
+        issues:<br /><br />
+        • Activating the card.<br />
+        • The card isn't working.<br />
+        • Checking the balance.<br />
+        • Forgetting your PIN.<br />
+        • The card is lost or stolen.<br />
+        • Not receiving a PIN.<br />
+        • The card is declined.<br /><br />
+
+        Thank you for your cooperation! <br /><br /><br />
+      </p>
+    </div>
+    <div class="ticket-section" id="ticket20">
+      <h2><center>Auto Compensation Credit</center></h2>
+      <p>
+        Thank you for contacting Plusnet today.<br /><br />
+        I am sorry for the inconvenience this may have caused.<br /><br />
+
+        <u>The details of your Compensation credit are as follows:</u
+        ><br /><br />
+
+        • <b>Compensation Credit for :</b> Delayed loss of service repair (Total
+        Loss of Service) / Delayed Provisioning<br /><br />
+        • <b>Total Days Eligible : </b>XX<br /><br />
+        • <b>Credit Amount :</b> £AMOUNT<br /><br />
+
+        <u>Please Note:</u><br /><br />
+        This credit will apply to your next month's bill, so you’ll see it
+        reflected there.<br /><br />
+
+        Thank you for your patience!<br /><br /><br /><br /><br /><br />
+
+        <b>** INTERNAL **</b><br /><br />Auto Compensation Amount per Day<br /><br />
+
+        <strong>2024</strong><br /><br />
+        • Delayed Repair - Total Loss of Service: £9.76<br />
+        • Missing Appointment: £30.49<br />
+        • Delayed Provision: £6.10<br /><br /><br />
+
+        <strong>2023</strong><br /><br />
+        • Delayed Repair - Total Loss of Service: £9.33<br />
+        • Missing Appointment: £29.15<br />
+        • Delayed Provision: £5.83<br />
+      </p>
+    </div>
+
+    <div class="ticket-section" id="ticket21">
+      <h2><center>Account Access Ticket</center></h2>
+      <p>
+        <b>** INTERNAL **</b><br /><br />
+
+        I have accessed the account to assist a colleague or as part of an
+        ongoing investigation.<br /><br />
+        No further changes have been made.<br /><br />
+      </p>
+    </div>
+    <div class="ticket-section" id="ticket22">
+      <h2><center>Opening Complaint Ticket</center></h2>
+      <p>
+        Thank you for contacting Plusnet today. I am sorry for the inconvenience
+        this may have caused. <br /><br />
+        We take your concerns seriously and have opened a complaint regarding
+        your account.<br /><br />
+
+        <u>Reason for Complaint:</u><br /><br />
+        • <br /><br /><br /><br /><br />
+
+        We will investigate your complaint and keep you updated on the progress.
+        Thank you for your patience and understanding.<br /><br />
+      </p>
+    </div>
+
+    <div class="ticket-section" id="ticket23">
+      <h2><center>How to Return Plusnet Router</center></h2>
+      <p>
+        Thank you for contacting Plusnet today.<br /><br />
+
+        As part of your account closure or equipment return process, you can
+        return our router <b>free of charge</b> via the Post Office.<br /><br />
+
+        <u><b>Here’s how:</b></u
+        ><br /><br />
+        • Just go to our Royal Mail page to create a free returns label by
+        clicking on this link
+        https://www.royalmail.com/track-my-return#/details/2886<br /><br />
+        • You can either print your label at home or use QR code on the label to
+        print it at a Post Office.<br /><br />
+        • Take the package to your nearest Post Office.<br /><br />
+        • Keep your proof of postage until we confirm receipt, which usually
+        takes about 7 days.<br /><br /><br />
+
+        Thank you for your cooperation!<br /><br />
+
+        For more information, please visit our help page:
+        https://www.plus.net/help/broadband/returns/.<br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />
+      </p>
+    </div>
+    <div class="ticket-section" id="ticket24">
+      <h2><center>Set Callback</center></h2>
+      <p>
+        Thank you for contacting Plusnet today.<br /><br />
+
+        As discussed, we have arranged a callback for you at your preferred
+        time.<br /><br />
+
+        <u>Callback Details:</u><br /><br />
+        • <b>Contact Number:</b> XXXXX<br /><br />
+        • <b>Date and Time:</b> XXXXX<br /><br />
+        • <b>Reason for Callback:</b> XXXXX<br /><br />
+
+        We will be contacting you to assist with your query at the scheduled
+        time.<br /><br />
+
+        Thank you for your patience !<br /><br />
+      </p>
+    </div>
+
+    <footer style="text-align: center; margin-top: 20px">
+      Created By &copy; Ash (AshrafAli Abed) | Home Billing C, Leeds
+    </footer>
     <script>
       function showTicket(ticketId) {
         // Hide all ticket sections
@@ -103,631 +849,5 @@ footer {
         }
       }
     </script>
-  </head>
-  <body>
-    <div class="sticky-menu">
-  <div class="ticket-row">
-    <div class="ticket">
-      <a href="javascript:void(0)" onclick="showTicket('ticket1')">Payment</a>
-    </div>
-    <div class="ticket">
-      <a href="javascript:void(0)" onclick="showTicket('ticket2')">Credit</a>
-    </div>
-    <div class="ticket">
-      <a href="javascript:void(0)" onclick="showTicket('ticket3')">Refund</a>
-    </div>
-    <div class="ticket">
-        <a href="javascript:void(0)" onclick="showTicket('ticket20')">Compensation</a>
-      </div>
-    <div class="ticket">
-      <a href="javascript:void(0)" onclick="showTicket('ticket4')">Missing Discount</a>
-    </div>
-    <div class="ticket">
-      <a href="javascript:void(0)" onclick="showTicket('ticket5')">Resolution Payment</a>
-    </div>
-    
-    <div class="ticket">
-      <a href="javascript:void(0)" onclick="showTicket('ticket7')">DPA Failed</a>
-    </div>
-    <div class="ticket">
-        <a href="javascript:void(0)" onclick="showTicket('ticket9')">CPI</a>
-      </div>
-
-</div>
-    <div class="ticket-row">
-    
-    <div class="ticket">
-      <a href="javascript:void(0)" onclick="showTicket('ticket8')">Direct Debit Change</a>
-    </div>
-    <div class="ticket">
-        <a href="javascript:void(0)" onclick="showTicket('ticket6')">Billing Date Change</a>
-      </div>
-      
-    
-      <div class="ticket">
-        <a href="javascript:void(0)" onclick="showTicket('ticket13')">Call Plan Change</a>
-      </div>
-      <div class="ticket">
-        <a href="javascript:void(0)" onclick="showTicket('ticket11')">Proof Of Payment</a>
-      </div>
-      <div class="ticket">
-        <a href="javascript:void(0)" onclick="showTicket('ticket12')">Final Bill</a>
-      </div>
-    
-    <div class="ticket">
-      <a href="javascript:void(0)" onclick="showTicket('ticket10')">DCA Contact</a>
-    </div>
-    <div class="ticket">
-        <a href="javascript:void(0)" onclick="showTicket('ticket21')">Access Account</a>
-      </div>
-    
-  </div>
-  <div class="ticket-row">
-    
-    <div class="ticket">
-      <a href="javascript:void(0)" onclick="showTicket('ticket14')">Remove Restriction</a>
-    </div>
-    <div class="ticket">
-        <a href="javascript:void(0)" onclick="showTicket('ticket15')">Transfer To COT</a>
-      </div>
-    
-    <div class="ticket">
-        <a href="javascript:void(0)" onclick="showTicket('ticket16')">Call Listening</a>
-      </div>
-      <div class="ticket">
-        <a href="javascript:void(0)" onclick="showTicket('ticket17')">Reward Card Email</a>
-      </div>
-      <div class="ticket">
-        <a href="javascript:void(0)" onclick="showTicket('ticket19')">Blackhack Contact</a>
-      </div>
-      <div class="ticket">
-        <a href="javascript:void(0)" onclick="showTicket('ticket18')">Manager Escalation</a>
-      </div>
-      
-      <div class="ticket">
-        <a href="javascript:void(0)" onclick="showTicket('ticket22')">Open Complaint</a>
-      </div>
-      
-    </div>
-</div>
-
-    <div class="ticket-section" id="ticket1">
-      <h2><center>Payment Confirmation</center></h2>
-      <p>
-        <br /><br />
-
-        Thank you for contacting Plusnet today.<br /><br />
-
-        Following our conversation, I am pleased to confirm that we have
-        successfully processed the outstanding payment on your account. The
-        outstanding balance has now been cleared.<br><br>
-        
-        <u>Please Note:</u>
-    <ul>
-      <li>Any account restrictions will be lifted within the next 4 hours.</li>
-       </ul>
-         <br /><br /><br />
-
-        You can login to your account to review your details by clicking
-        https://www.plus.net/member-centre/login<br /><br />
-
-        If you have further questions, give our team a call on 0330 123 9123 or
-        0345 140 0200.
-      </p>
-    </div>
-    <div class="ticket-section" id="ticket2">
-      <h2><center>Credit</center></h2>
-      <p>
-        <br />
-        Thank you for contacting Plusnet today.<br /><br />
-
-        I am sorry for the inconvenience this may have caused.<br /><br />
-
-        <u>The details of your credit are as follows:</u><br /><br />
-        
-            <ul><li><b>Reason Code:</b> Gesture of Goodwill / Incorrect Broadband Subscription
-                Charges</li><br>
-            <li><b>Credit Amount:</b> £AMOUNT</li></ul>
-          
-        
-        <u>Please Note:</u> This credit will apply on your next bill, so you’ll see it reflected
-        there.<br /><br />
-
-        Thank you for your understanding!<br /><br /><br /><br />
-
-        You can login to your account to review your account details by clicking
-        https://www.plus.net/member-centre/login<br /><br />
-
-        If you have further questions, give our team a call on 0330 123 9123 or
-        0345 140 0200.<br /><br />
-      </p>
-    </div>
-    <div class="ticket-section" id="ticket3">
-      <h2><center>Refund</center></h2>
-      <p>
-        <br />
-
-        Thank you for contacting Plusnet today.<br /><br />
-
-        I am sorry for the inconvenience this may have caused.<br /><br />
-
-        The details of your refund are as follows:<br /><br />
-        <b>
-            <ul>
-                <li>Reason Code: Incorrect Broadband Subscription Charges due to missing
-                    discount</li><br>
-                <li>Refund Amount : £AMOUNT</li>
-            </ul>
-        </b>
-        <u>Please note</u> that it can take up to 3-5 working days for a refund to be
-        reflected in your bank account after approval.<br /><br />
-
-        Thank you for your understanding!<br /><br /><br /><br />
-
-        You can log in to your account to review your account details by
-        clicking https://www.plus.net/member-centre/login.<br /><br />
-
-        If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
-      </p>
-    </div>
-    <div class="ticket-section" id="ticket4">
-      <h2><center>Missing Discount</center></h2>
-      <p>
-        <br />
-        Thank you for contacting Plusnet today.<br /><br />
-
-        I am sorry for the inconvenience this may have caused.<br /><br />
-
-        The discount has been applied to your account, and the difference from
-        your last bill will be automatically credited in next month’s
-        statement.<br /><br />
-
-        Your new monthly payable amount is <b>£AMOUNT</b>.<br /><br />
-
-        Thank you for your understanding!<br /><br /><br /><br />
-
-        You can log in to your account to review your account details by
-        clicking https://www.plus.net/member-centre/login.<br /><br />
-
-        If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
-      </p>
-    </div>
-    <div class="ticket-section" id="ticket5">
-      <h2><center>Resolution Payment</center></h2>
-      <p>
-        <br />
-        Thank you for contacting Plusnet today.<br /><br />
-
-        I am sorry for the inconvenience this may have caused.<br /><br />
-
-        As discussed, I've applied a resolution payment to your account of <b>£XXX</b>
-        and this will be sent to you by cheque, in the next 3-5 working days
-        after approval.<br /><br />
-
-        This has been sent as a gesture of goodwill [reason for the gesture of
-        goodwill/complaint resolution and call summary]<br /><br />
-
-        <br /><br /><br /><br />
-
-        You can log in to your account to review your account details by
-        clicking https://www.plus.net/member-centre/login.<br /><br />
-
-        If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
-      </p>
-    </div>
-    <div class="ticket-section" id="ticket6">
-      <h2><center>Billing Date Change</center></h2>
-      <p>
-        Thank you for contacting Plusnet today.<br /><br />
-        Following our conversation, I am pleased to confirm that we have
-        successfully <b>changed the billing date</b> as requested . Below are
-        the details:<br />
-        <br />
-        <ul>
-          <li><b>New Billing Date:</b> XX</li><br>
-          <li>
-            <b>New Direct Debit Date:</b> XX (direct debit is always set 7 days
-            after the billing date)
-          </li>
-        </ul>
-        <br />
-        <strong>Important Information:</strong>
-    <ul>
-      <li>If your next bill is a little higher or lower than normal, this will be due to pro-rata charges and is nothing to be concerned about.</li>
-      <li>If you decide to change your bill date again, you will need to wait 4 months to do so.</li>
-    </ul>
-        Thank you for your understanding!<br /><br /><br />
-
-        You can log in to your account to review your account details by
-        clicking https://www.plus.net/member-centre/login.<br /><br />
-
-        If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
-      </p>
-    </div>
-    <div class="ticket-section" id="ticket7">
-        <h2><center>Failed DPA</center></h2>
-        <p>
-          <br>Thank you for contacting Plusnet today. I am sorry for the inconvenience this may have caused.<br /><br />
-      
-          Unfortunately, we are unable to provide any account-specific information as you have not met our security requirements.<br /><br />
-      
-          <b>Please provide at least 2 of the following pieces of security information:</b>
-          <ul>
-            <li>Username</li>
-            <li>Two random characters from your Password</li>
-            <li>Answer to your Security Question (if applicable)</li>
-            <li>If you have Direct Debit: Last 2 digits of your Sort Code and the last 3 digits of your Bank Account Number; otherwise, provide the last 4 digits of your card number and the expiry date (if applicable)</li>
-            <li>Your Full Address with Landline Number</li>
-          </ul>
-      
-          Due to the Data Protection Act 2018, we cannot discuss your account with anyone other than the account holder.
-          We understand this may be frustrating, but this policy is in place to protect your information from misuse.<br /><br />
-      
-          Thank you for your understanding!<br /><br />
-
-        You can reset your login password by clicking https://www.plus.net/member-centre/forgot-password/.<br /><br />
-
-        If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
-        </p>
-      </div>
-      <div class="ticket-section" id="ticket8">
-        <h2><center>Direct Debit Change</center></h2>
-        <p>
-          <br>Thank you for contacting Plusnet today.<br /><br />
-      
-          I am pleased to inform you that we have successfully changed your Direct Debit using the details you provided today. Below are the important details:<br /><br />
-      
-          <u>Key Information:</u>
-          <ul>
-            <li>The instructions will be sent out to your bank within 24 hours.</li>
-            <li>This can take up to 3 working days to become active.</li>
-            <li>If you have a bill due during this time, we will contact you if a one-off payment is necessary.</li>
-            <li>Once active, your new details will be used for all future payments.</li>
-          </ul>
-      
-          You can log in to your account to review your account details by
-        clicking https://www.plus.net/member-centre/login.<br /><br />
-
-        If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
-      </p>
-      </div>
-      <div class="ticket-section" id="ticket9">
-        <h2><center>Consumer Price Index (CPI)</center></h2>
-        <p>
-          Thank you for contacting Plusnet today.<br /><br />
-          
-          As discussed, the Consumer Price Index (CPI) is a recognised measure of inflation that tracks the average increase in prices for consumers and businesses across the country over the last 12 months.<br /><br />
-      
-          All accounts in scope will have an increase applied after 31st March 2024 based on the December CPI rate of 4.00% + 3.90%, resulting in a total increase of 7.9% as announced by the Office for National Statistics.<br /><br />
-      
-          I'm sorry to hear that you are not happy with the recent price rise.<br /><br />
-      
-          Unfortunately, this is due to company policy, and I am unable to prevent this from happening.<br /><br />
-      
-          Thank you for your understanding!<br /><br />
-        </p>
-        <p><b>Internal Notes:</b></p>
-        <ul>
-          <li>CPI of 2023 was 14.4%</li>
-          <li>CPI of 2024 is 7.9%</li>
-        </ul>
-        You can log in to your account to review your account details by
-        clicking https://www.plus.net/member-centre/login.<br /><br />
-
-        If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
-      </div>
-      <div class="ticket-section" id="ticket10">
-        <h2><center>Account Sent to Debt Collection Agency</center></h2>
-        <p>
-          Thank you for contacting Plusnet today.<br /><br />
-      
-          I am sorry to inform you that your account has been sent to a collection agency due to outstanding payments.<br /><br />
-      
-          <u>Please find the relevant information about Debt Collection Agency :</u><br />
-          <ul>
-            <li><b>Agency Name:</b> EP Financial Solutions (previously known as Arvato Ltd)</li><br>
-            <li><b>Contact Number:</b> 0344 571 4030</li><br>
-            <li><b>Website:</b> https://pay.myepfs.com/</li><br>
-          </ul>
-      
-          If you have any questions or concerns regarding payment plan, please feel free to reach out to them directly.<br /><br />
-          <u>Please Note:</u> Once your payment is cleared with them or a payment plan has started, please contact the Plusnet sales team to create a brand new account.<br><br>
-      
-          Thank you for your understanding.<br /><br />
-        </p>
-      </div>
-      <div class="ticket-section" id="ticket11">
-        <h2><center>Proof of Payment Required</center></h2>
-        <p>
-          Thank you for contacting Plusnet today.I am sorry for the inconvenience this may have caused.<br /><br />
-      
-          To assist us in resolving your inquiry, we kindly request proof of the payment made from your bank account.<br /><br />
-      
-          <u>Please upload the following information:</u>
-          <ul>
-            <li><b>Bank Statement:</b> A clear copy showing the payment, including the date and total amount taken from your account. <br />We can accept a screenshot or photo if that is more convenient.</li>
-          </ul>
-      
-          You can upload the document through our member center website by adding it in the open questions or open tickets.<br /><br />
-      
-          Once we receive the proof, we will be able to assist you further within 48 working hours.<br /><br />
-      
-          Thank you for your cooperation!<br /><br />
-
-          
-        </p>
-      </div>
-      <div class="ticket-section" id="ticket12">
-        <h2><center>Final Bill</center></h2>
-        <p>
-          Thank you for contacting Plusnet today.<br /><br />
-      
-          We would like to inform you that your final bill will be generated 20 days after your account is closed. Below are some important details regarding the billing and refund process:<br /><br />
-      
-          <u>Final Bill Information:</u>
-          <ul>
-            <li>Your account closed on XXXXXX.</li>
-            <li>Your final bill will be issued 20 days after the account closure date.</li>
-            <li>Any remaining payment will be refunded if you have an active Direct Debit.</li>
-            <li>If you do not have an active Direct Debit, you will receive an email requesting your bank details.</li>
-            <li>If the email link does not work or expires, a cheque for the final amount will automatically be sent to you.</li>
-          </ul>
-      
-      
-          Thank you for your understanding!<br /><br />
-        </p>
-      </div>
-      <div class="ticket-section" id="ticket13">
-        <h2><center>Call Plan Change</center></h2>
-        <p>
-          Thank you for contacting Plusnet today.<br /><br />
-      
-          We would like to inform you that your call plan has been updated. Below are the details regarding the changes:<br /><br />
-      
-          <u>Call Plan Information:</u>
-          <ul>
-            <li>Your call plan has been <b>changed</b> to <b>NAME_OF_CALL_PLAN</b>.</li>
-            <li>The new call plan will take effect from your next billing date.</li>
-            <li>Your next billing date will be <b>XXXXXX</b>.</li>
-          </ul>
-      
-          We have a good guide here: https://www.plus.net/help/legal/residential-phone-tariffs/, which explains our call charges and plans in more detail.<br /><br />
-      
-          You can log in to your account to review your account details by
-        clicking https://www.plus.net/member-centre/login.<br /><br />
-
-        If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
-
-        </p>
-      </div>
-
-      <div class="ticket-section" id="ticket14">
-        <h2><center>Remove Restriction Request</center></h2>
-        <p>
-          Thank you for contacting Plusnet today.<br /><br />
-      
-          As discussed, I have already assigned your account to the concerned department to remove the restrictions on your account. <br /><br />
-          
-          <u>Please Note:</u>
-    <ul>
-      <li>Any account restrictions will be lifted within the next 4 hours.</li>
-       </ul>
-         
-      
-          Thank you for your understanding!<br /><br /><br /><br />
-      
-          <hr>
-          <b>** INTERNAL **</b><br /><br />
-      
-          I advised the customer to manually remove the restriction by selecting 'Click here to acknowledge and continue' or 'Click on remove restriction temporarily' to bypass the splash screen. However, they were unable to complete the process.<br /><br />
-      
-          Can we please remove the splash screen restriction as the customer is unable to bypass the splash screen?<br /><br />
-        </p>
-      </div>
-      <div class="ticket-section" id="ticket15">
-        <h2><center>Transfer to Other Department</center></h2>
-        <p>
-          Thank you for contacting Plusnet today.<br /><br />
-      
-          As discussed, I have successfully transferred you to the <b>Retention Department</b>, who will assist you further with your enquiry regarding <b>XXXXX</b>.<br /><br />
-          Thank you for your patience and understanding!<br /><br />
-          <hr>
-                <b>** INTERNAL **</b><br /><br />
-          Data Protection: Passed (Fully DPA) <br /><br />
-        </p>
-      </div>
-      <div class="ticket-section" id="ticket16">
-        <h2><center>Call Listening Request</center></h2>
-        <p>
-          Thank you for contacting Plusnet today.<br /><br />
-      
-          As discussed, I have assigned your account to the Call Listening Department for the call listening request. Please allow 3-5 working days for this process to be completed. We will inform you as soon as the call listening outcome is available.<br /><br />
-      
-          Thank you for your cooperation!<br /><br />
-          <hr>
-          <b>** INTERNAL **</b><br /><br />
-          <ul>
-            <li><b>SID:</b> </li>
-            <li><b>Advisor's Name:</b> </li>
-            <li><b>Number Calling From:</b> </li>
-            <li><b>Date & Approximate Time of Call:</b> </li>
-            <li><b>What are we looking for?:</b> </li>
-          </ul>
-        </p>
-      </div>
-      <div class="ticket-section" id="ticket17">
-        <h2><center>Reward card Escalation - pnetbillop@plus.net</center></h2>
-        <p>      
-                Thank you for contacting Plusnet today.<br /><br />
-      
-      As discussed, I have forwarded your account to the Cashback Department for the <b>£XX Reward Card</b>. Please allow 3-5 working days for this process to be completed. We will notify you as soon as the outcome is available.<br /><br />
-      
-      Thank you for your cooperation!<br /><br />
-      
-                <hr>
-                <b>** INTERNAL **</b><br /><br />
-          Hello,<br /><br />
-      
-          I have an escalation for a cash-back promotion offer. Here are the details:<br />
-      
-          <ul>
-            <li><b>Customer's SID:</b> </li>
-            <li><b>Promo Code:</b> </li>
-            <li><b>Reason for Escalation:</b> </li>
-            <li><b>Has the Albert/KBMS process been followed?</b> Yes</li>
-            <li><b>Has the Blackhawk portal been checked?</b> Yes</li>
-            <li><b>Action Required:</b> Issue Reward Card</li>
-            <li><b>My Team Leader's Name:</b> Kayleigh Purkiss</li>
-          </ul>
-      
-          Thank you!
-        </p>
-      </div>
-      <div class="ticket-section" id="ticket18">
-        <h2><center>Manager Escalation Request</center></h2>
-        <p>
-          Thank you for contacting Plusnet today. I am sorry for any inconvenience this may have caused.<br /><br />
-      
-          As discussed, I have raised the manager (supervisor) escalation. Please allow 1-2 working days for a manager (supervisor) callback. When the manager (supervisor) calls you back, you will need to pass security again.<br /><br />
-          We will review your request and get back to you shortly.<br /><br />
-      
-          Thank you for your cooperation!<br /><br />
-          <hr>
-          <b>** INTERNAL **</b><br />
-      
-          <ul>
-            <li><b>Customer Name:</b></li>
-            <li><b>Contact Number:</b></li>
-            <li><b>Reason for Escalation:</b></li>
-          </ul>
-        </p>
-      </div>
-      <div class="ticket-section" id="ticket19">
-        <h2><center>Blackhawk (Pure Card) Contact</center></h2>
-        <p>
-          Thank you for contacting Plusnet today.<br /><br />
-          I am sorry for any inconvenience this may have caused.<br /><br />
-          
-          As discussed, please contact Blackhawk (Pure Card), and they will assist you further with your reward card query. You can email or call them, and a member of the team will be happy to help.<br /><br />  
-      
-         <b>Contact Information:</b><br />
-         <ul>
-          <li>Telephone: 
-              <ul>
-                  <li><b>0344 800 6435</b></li>
-                  <li><b>0344 879 1069</b></li>
-              </ul>
-          </li>
-      </ul>
-      <ul>
-          <li>Email: 
-              <ul>
-                  <li>info@purecard.com</li>
-                  <li>plusnet@purecard.com</li>
-              </ul>
-          </li>
-      </ul>
-          Phone lines are open from 8 AM to 8 PM, Monday to Sunday, excluding Christmas, Boxing Day, and New Year's Day. Calls to this number are charged at the same rate as 01 or 02 numbers on mobile phone tariffs.<br /><br />
-          The Blackhawk (Pure Card) team can assist you with the following issues:<br />
-          <ul>
-            <li>Activating the card.</li>
-            <li>The card isn't working.</li>
-            <li>Checking the balance.</li>
-            <li>Forgetting your PIN.</li>
-            <li>The card is lost or stolen.</li>
-            <li>Not receiving a PIN.</li>
-            <li>The card is declined.</li>
-          </ul>
-        </p>
-      </div>
-      <div class="ticket-section" id="ticket20"> 
-        <h2><center>Auto Compensation Credit</center></h2>
-        <p>
-          Thank you for contacting Plusnet today.<br /><br />
-          I am sorry for the inconvenience this may have caused.<br /><br />
-          
-          <u>The details of your credit are as follows:</u><br />
-          
-          <ul>
-            <li><b>Compensation Credit for:</b> Total Loss of Service / Delayed Provisioning</li>
-            <li><b>Total Days Eligible:</b></li>
-            <li><b>Credit Amount:</b> £AMOUNT</li>
-          </ul>
-          
-          <u>Please Note:</u> This credit will apply on your next bill, so you’ll see it reflected there.<br /><br />
-          
-          Thank you for your patience!<br /><br />
-          
-      
-      
-      <hr>
-                <b>** INTERNAL **</b><br /><br />Auto Compensation Amount per Day<br/><br />
-      
-        <strong>2024</strong>
-      
-      <ul>
-        <li>Delayed Repair - Total Loss of Service: £9.76</li>
-        <li>Missing Appointment: £30.49</li>
-        <li>Delayed Provision: £6.10</li>
-      </ul>
-      
-      
-        <strong>2023</strong>
-      <ul>
-        <li>Delayed Repair - Total Loss of Service: £9.33</li>
-        <li>Missing Appointment: £29.15</li>
-        <li>Delayed Provision: £5.83</li>
-      </ul>    
-      </div>
-      <div class="ticket-section" id="ticket21">
-        <h2><center>Account Access Ticket</center></h2>
-        <p>
-          <b>** INTERNAL **</b><br /><br />
-          
-          I have accessed the account to assist a colleague or as part of an ongoing investigation.<br /><br />
-          No further changes have been made.<br /><br />
-        </p>
-      </div>
-      <div class="ticket-section" id="ticket22">
-        <h2><center>Opening Complaint Ticket</center></h2>
-        <p>
-          Thank you for contacting Plusnet today. I am sorry for the inconvenience this may have caused. <br /><br />
-          We take your concerns seriously and have opened a complaint regarding your account.<br /><br />
-          
-          <u>Reason for Complaint:</u>
-          <ol>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ol>
-          
-          <u>Action Required:</u>
-          <ol>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ol>
-          
-          We will investigate your complaint and keep you updated on the progress. Thank you for your patience and understanding.<br /><br />
-        </p>
-      </div>
-      
-      
-      
-      
-      
-      
-      
-      <footer style="text-align: center; margin-top: 20px;">This Tickets Templates Is Created By 
-        &copy; Ash (AshrafAli Abed) | Home Billing C, Leeds
-      </footer>
   </body>
 </html>
