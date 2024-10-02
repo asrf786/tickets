@@ -78,7 +78,31 @@
 
       .ticket a:hover {
         background-color: #d0d0d0; /* Background color on hover */
+      } /* Default button style */
+      .copy-button {
+        background-color: #007bff; /* Blue background */
+        color: white; /* White text */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        padding: 10px 15px; /* Padding */
+        font-size: 16px; /* Font size */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s, transform 0.2s; /* Transition effects */
       }
+
+      /* Hover effect */
+      .copy-button:hover {
+        /*background-color: #0056b3;  Darker blue on hover */
+        transform: scale(1.05); /* Slightly enlarge on hover */
+      }
+
+      /* Copied state */
+      .copied {
+        background-color: green; /* Green background */
+        color: white; /* White text */
+        transform: scale(1.05); /* Keep the enlarged effect */
+      }
+
       footer {
         background-color: #f0f0f0; /* Normal footer color */
         text-align: center;
@@ -226,17 +250,26 @@
 
     <div class="ticket-section" id="ticket1">
       <h2><center>Payment Confirmation</center></h2>
-      <p>
-        <br /><br />
+      <button
+        class="copy-button"
+        id="copy-button1"
+        onclick="copyToClipboard('ticket-content1', 'copy-button1')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content1">
+        <br />
 
         Thank you for contacting Plusnet today.<br /><br />
 
-        Following our conversation, I am pleased to confirm that we have
-        successfully processed the outstanding payment on your account. The
-        outstanding balance has now been cleared.<br /><br />
+        Following our conversation, I can confirm that we have<b>
+          successfully taken the outstanding payment </b
+        >on your account. The outstanding balance has now been cleared.<br /><br />
 
         <u>Please Note:</u><br /><br />
-        • Any account restrictions will be lifted within the next 4 hours.<br /><br /><br />
+        <b>• Any account restrictions will be lifted within the next 4 hours.</b
+        ><br /><br /><br />
 
         You can log in to your account to review your details by clicking
         https://www.plus.net/member-centre/login<br /><br />
@@ -248,23 +281,33 @@
 
     <div class="ticket-section" id="ticket2">
       <h2><center>Credit</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button2"
+        onclick="copyToClipboard('ticket-content2', 'copy-button2')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content2">
         <br />
-        Thank you for contacting Plusnet today.<br /><br />
+        Thank you for contacting Plusnet today. I am sorry for the inconvenience
+        this may have caused.<br /><br />
 
-        I am sorry for the inconvenience this may have caused.<br /><br />
+        The details of your <b>Credit</b> are as follows:<br /><br />
 
-        <u>The details of your credit are as follows:</u><br /><br />
+        •
+        <b
+          >Reason Code: Gesture of Goodwill / Incorrect Broadband Subscription
+          Charges<br /><br />
+          • Credit Amount: £AMOUNT</b
+        ><br /><br />
 
-        • <b>Reason Code:</b> Gesture of Goodwill / Incorrect Broadband
-        Subscription Charges<br />
-        • <b>Credit Amount:</b> £AMOUNT<br /><br />
-
-        <u>Please Note:</u> <br /><br />
+        <u>Please Note :</u>
         This credit will apply to your next month's bill, so you’ll see it
         reflected there.<br /><br />
 
-        Thank you for your understanding!<br /><br /><br /><br />
+        Thank you for your understanding!<br /><br />
 
         You can log in to your account to review your account details by
         clicking https://www.plus.net/member-centre/login<br /><br />
@@ -276,22 +319,32 @@
 
     <div class="ticket-section" id="ticket3">
       <h2><center>Refund</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button3"
+        onclick="copyToClipboard('ticket-content3', 'copy-button3')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content4">
         <br />
-        Thank you for contacting Plusnet today.<br /><br />
+        Thank you for contacting Plusnet today. I am sorry for the inconvenience
+        this may have caused.<br /><br />
 
-        I am sorry for the inconvenience this may have caused.<br /><br />
+        The details of your <b>Refund</b> are as follows:<br /><br />
+        •
+        <b
+          >Reason Code: Incorrect Broadband Subscription Charges Due To Missing
+          Discount<br /><br />
+          • Refund Amount: £AMOUNT</b
+        ><br /><br />
 
-        <u>The details of your refund are as follows:</u><br /><br />
-        • <b>Reason Code:</b> Incorrect Broadband Subscription Charges Due To
-        Missing Discount<br />
-        • <b>Refund Amount:</b> £AMOUNT<br /><br />
-
-        <u>Please note:</u> <br /><br />
+        <u>Please Note :</u>
         It can take up to 3-5 working days for a refund to be reflected in your
         bank account after approval.<br /><br />
 
-        Thank you for your understanding!<br /><br /><br /><br />
+        Thank you for your understanding!<br /><br />
 
         You can log in to your account to review your account details by
         clicking https://www.plus.net/member-centre/login.<br /><br />
@@ -320,11 +373,18 @@
 
     <div class="ticket-section" id="ticket4">
       <h2><center>Missing Discount</center></h2>
-      <p>
-        <br />
-        Thank you for contacting Plusnet today.<br /><br />
+      <button
+        class="copy-button"
+        id="copy-button4"
+        onclick="copyToClipboard('ticket-content4', 'copy-button4')"
+      >
+        Copy
+      </button>
 
-        I am sorry for the inconvenience this may have caused.<br /><br />
+      <p id="ticket-content4">
+        <br />
+        Thank you for contacting Plusnet today. I am sorry for the inconvenience
+        this may have caused.<br /><br />
 
         The discount has been applied to your account, and your monthly payable
         amount is now: <b>£AMOUNT</b><br /><br />
@@ -334,7 +394,7 @@
         automatically adjusted on your next month's bill, as the next month's
         pro-rata discount bill will generate.<br /><br />
 
-        Thank you for your understanding!<br /><br /><br /><br />
+        Thank you for your understanding!<br /><br />
         You can log in to your account to review your account details by
         clicking https://www.plus.net/member-centre/login.<br /><br />
 
@@ -345,32 +405,47 @@
 
     <div class="ticket-section" id="ticket5">
       <h2><center>Resolution Payment Cheque</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button5"
+        onclick="copyToClipboard('ticket-content5', 'copy-button5')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content5">
         <br />
-        Thank you for contacting Plusnet today.<br /><br />
+        Thank you for contacting Plusnet today. I am sorry for the inconvenience
+        this may have caused.<br /><br />
 
-        I am sorry for the inconvenience this may have caused.<br /><br />
-
-        As discussed, I've applied a resolution payment of <b>£XXX</b> to your
-        account, and this will be sent to you by cheque within the next 3-5
+        As discussed, I've applied a resolution payment of <b>£AMOUNT</b> to
+        your account, and this will be sent to you by cheque within the next 3-5
         working days after approval.<br /><br />
 
         This payment has been issued as a gesture of goodwill due to
-        <b>reason_for_the_gesture_of_goodwill</b
-        ><br /><br /><br /><br /><br /><br />
+        <b>Reason_for_the_gesture_of_goodwill</b>
       </p>
     </div>
     <div class="ticket-section" id="ticket6">
       <h2><center>Billing Date Change</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button6"
+        onclick="copyToClipboard('ticket-content6', 'copy-button6')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content6">
+        <br />
         Thank you for contacting Plusnet today.<br /><br />
         Following our conversation, I am pleased to confirm that we have
         successfully <b>changed the billing date</b> as requested. Below are the
         details:<br />
         <br />
         <b>• New Billing Date:</b> XX<br /><br />
-        <b>• New Direct Debit Date:</b> XX (As direct debit is always set 7 days
-        after the billing date)<br />
+        <b>• New Direct Debit Date:</b> XX <br /><br />(As direct debit is
+        always set 7 days after the billing date)<br />
         <br />
         <u>Please note</u>:<br /><br />
         • If your next bill is a little higher or lower than normal, this will
@@ -390,7 +465,15 @@
 
     <div class="ticket-section" id="ticket7">
       <h2><center>Failed DPA</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button7"
+        onclick="copyToClipboard('ticket-content7', 'copy-button7')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content7">
         <br />Thank you for contacting Plusnet today. I am sorry for the
         inconvenience this may have caused.<br /><br />
 
@@ -427,9 +510,17 @@
 
     <div class="ticket-section" id="ticket8">
       <h2><center>Direct Debit Change</center></h2>
-      <p>
-        <br />Thank you for updating your payment method while speaking with
-        Plusnet today.<br /><br />
+      <button
+        class="copy-button"
+        id="copy-button8"
+        onclick="copyToClipboard('ticket-content8', 'copy-button8')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content8">
+        <br />Thank you for updating your <b>payment method</b> while speaking
+        with Plusnet today.<br /><br />
 
         I am pleased to inform you that we have successfully changed your Direct
         Debit using the details you provided. <br /><br />
@@ -438,8 +529,8 @@
         • The instructions will be sent to your bank within 24 hours.<br />
         • This process can take up to 3 working days to become active.<br />
         • Once active, your new details will be used for all future payments.<br />
-        • Your old payment method has been automatically removed from our
-        system.<br /><br />
+        • Any previous payment methods you had have been automatically removed
+        from our system.<br /><br />
 
         You can log in to your account to review your account details by
         clicking https://www.plus.net/member-centre/login.<br /><br />
@@ -450,7 +541,16 @@
     </div>
     <div class="ticket-section" id="ticket9">
       <h2><center>Consumer Price Index (CPI) 2024</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button9"
+        onclick="copyToClipboard('ticket-content9', 'copy-button9')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content9">
+        <br />
         Thank you for contacting Plusnet today.<br /><br />
 
         As discussed, the Consumer Price Index (CPI) is a recognised measure of
@@ -482,7 +582,16 @@
     </div>
     <div class="ticket-section" id="ticket10">
       <h2><center>Account Sent to Debt Collection Agency</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button10"
+        onclick="copyToClipboard('ticket-content10', 'copy-button10')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content10">
+        <br />
         Thank you for contacting Plusnet today.<br /><br />
 
         I am sorry to inform you that your account has been sent to a collection
@@ -506,7 +615,16 @@
     </div>
     <div class="ticket-section" id="ticket11">
       <h2 style="text-align: center">Proof of Payment Required</h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button11"
+        onclick="copyToClipboard('ticket-content11', 'copy-button11')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content11">
+        <br />
         Thank you for contacting Plusnet. I am sorry for any inconvenience
         caused.<br /><br />
 
@@ -548,57 +666,20 @@
         Thank you for your cooperation!<br />
       </p>
     </div>
-    <div class="ticket-section" id="ticket11">
-      <h2 style="text-align: center">Proof of Payment Required</h2>
-      <p>
-        Thank you for contacting Plusnet. I am sorry for any inconvenience
-        caused.<br /><br />
-
-        To help resolve your inquiry, please upload proof of the payment from
-        your bank account through our member center in the open questions or
-        tickets section.<br /><br />
-        You can view your open Questions here:
-        https://www.plus.net/wizard/?p=search.<br /><br />
-
-        <b>The statement needs to:</b><br /><br />
-        • Be a true copy of an original sent to you by the bank, printed from a
-        statement machine, or downloaded from internet banking.<br /><br />
-        • Display your bank sort code and account number.<br /><br />
-        • Show all transactions from at least from transcation date and at least
-        14 days following this date.<br /><br />
-
-        Please note we are also able to accept screenshots providing all the
-        above criteria are met. <br /><br />
-
-        <b>******** Please do not reply to this email. ********</b
-        ><br /><br /><br />
-
-        Please upload the document through our member center in the open
-        questions section, which you can directly view from here:
-        https://www.plus.net/wizard/?p=search.<br /><br />
-
-        Once we receive the proof, we will assist you within 48 working
-        hours.<br /><br />
-
-        You may attach an electronic .pdf copy or screenshots to this ticket
-        itself, or send a mailed copy to:<br /><br /><b>
-          Plusnet Endeavour, Sheffield Digital Campus, 1a Concourse Way,
-          Sheffield, S1 2BJ.<br /><br
-        /></b>
-
-        If you are sending a mailed copy, please include a cover note with your
-        account details to ensure we can match the statement to your account.<br /><br />
-
-        Thank you for your cooperation!<br />
-      </p>
-    </div>
-
     <div class="ticket-section" id="ticket12">
       <h2 style="text-align: center">Final Bill</h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button12"
+        onclick="copyToClipboard('ticket-content12', 'copy-button12')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content12">
+        <br />
         Thank you for contacting Plusnet. Your final bill will be generated 20
-        days after your account closure.
-        <br /><br />
+        days after your account closure. <br /><br />
 
         <u>Details regarding Final Bill:</u><br /><br />
         • Account closed on <b>XXXXXX</b>.<br />
@@ -609,17 +690,45 @@
         details.<br />
         • If the email link expires, a cheque will be automatically sent.<br /><br />
 
-        We appreciate your understanding!<br />
+        We appreciate your understanding!
+      </p>
+      <h2 style="text-align: center">Final Refund</h2>
+      <button
+        class="copy-button"
+        id="copy-button26"
+        onclick="copyToClipboard('ticket-content26', 'copy-button26')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content26">
+        <br />
+
+        Thank you for contacting Plusnet.<br /><br />
+        Following our conversation, I can confirm that your final refund is
+        <b>£AMOUNT</b> and this will be sent to your bank account within 3-5
+        working days which will appear under the name of<b> "DD refund."</b
+        ><br /><br />
+        Thank you for your patience!
       </p>
     </div>
 
     <div class="ticket-section" id="ticket13">
       <h2><center>Call Plan Change</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button13"
+        onclick="copyToClipboard('ticket-content13', 'copy-button13')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content13">
+        <br />
         Thank you for contacting Plusnet today.<br /><br />
 
-        We would like to inform you that your call plan has been updated. Below
-        are the details regarding the changes:<br /><br />
+        We would like to inform you that your <b>call plan</b> has been updated.
+        <br /><br />
 
         <u>New Call Plan Information:</u><br /><br />
         • Your call plan has been <b>changed</b> to
@@ -627,7 +736,7 @@
         • The new call plan will take effect from your next billing date.<br />
         • Your next billing date will be <b>XXXXXX</b>.<br /><br />
 
-        • Our call charges and plans in more detail on
+        • To know more about call plan and call charges :
         https://www.plus.net/broadband/extras/call-plans/ and full tariff guide
         on https://www.plus.net/help/legal/residential-phone-tariffs/<br /><br />
 
@@ -640,13 +749,22 @@
       <h2>
         <center>Remove Restriction Request (Debt managment enable)</center>
       </h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button14"
+        onclick="copyToClipboard('ticket-content14', 'copy-button14')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content14">
+        <br />
         Thank you for contacting Plusnet today.<br /><br />
 
         As discussed, I have already assigned your account to the concerned
         department to remove the restrictions on your account. <br /><br />
 
-        <u>Please Note:</u>
+        <u>Please Note :</u>
         Any account restrictions will be lifted within the next 4 hours.<br /><br />
 
         Thank you for your patience!<br /><br /><br /><br />
@@ -667,7 +785,16 @@
 
     <div class="ticket-section" id="ticket15">
       <h2><center>Transfer to Retention / Tech / Early Life</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button15"
+        onclick="copyToClipboard('ticket-content15', 'copy-button15')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content15">
+        <br />
         Thank you for contacting Plusnet today.<br /><br />
 
         As discussed, I have successfully transferred you to the concerned
@@ -682,7 +809,16 @@
 
     <div class="ticket-section" id="ticket16">
       <h2><center>Call Listening Request</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button16"
+        onclick="copyToClipboard('ticket-content16', 'copy-button16')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content16">
+        <br />
         Thank you for contacting Plusnet today.<br /><br />
 
         As discussed, I have assigned your account to the Call Listening
@@ -704,7 +840,16 @@
 
     <div class="ticket-section" id="ticket17">
       <h2><center>Reward Card Email (pnetbillop@plus.net)</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button17"
+        onclick="copyToClipboard('ticket-content17', 'copy-button17')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content17">
+        <br />
         Thank you for contacting Plusnet today.<br /><br />
 
         As discussed, I have forwarded your account to the Cashback Department.
@@ -731,7 +876,16 @@
     </div>
     <div class="ticket-section" id="ticket18">
       <h2><center>Manager Escalation Request</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button18"
+        onclick="copyToClipboard('ticket-content18', 'copy-button18')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content18">
+        <br />
         Thank you for contacting Plusnet today. I am sorry for any inconvenience
         this may have caused.<br /><br />
 
@@ -750,19 +904,27 @@
     </div>
     <div class="ticket-section" id="ticket19">
       <h2><center>Blackhawk (Pure Card) Contact</center></h2>
-      <p>
-        Thank you for contacting Plusnet today.<br /><br />
-        I am sorry for any inconvenience this may have caused.<br /><br />
+      <button
+        class="copy-button"
+        id="copy-button19"
+        onclick="copyToClipboard('ticket-content19', 'copy-button19')"
+      >
+        Copy
+      </button>
 
-        As discussed, please contact Blackhawk (Pure Card), and they will assist
-        you further with your reward card query. You can email or call them, and
-        a member of the team will be happy to help.<br /><br />
+      <p id="ticket-content19">
+        <br />
+        Thank you for contacting Plusnet today. I am sorry for any inconvenience
+        this may have caused.<br /><br />
 
-        <u>Contact Information:</u><br /><br />
+        As discussed, please contact<b> Blackhawk (Pure Card)</b>, and they will
+        assist you further with your reward card query. You can call them on :
+
+        <br /><br />
         • <b>0344 800 6435</b><br />
         • <b>0344 879 1069</b><br /><br />
 
-        • Phone lines are open from 8 AM to 8 PM, Monday to Sunday, excluding
+        This Phone lines are open from 8 AM to 8 PM, Monday to Sunday, excluding
         Christmas, Boxing Day, and New Year's Day. Calls to this number are
         charged at the same rate as 01 or 02 numbers on mobile phone tariffs.<br /><br />
 
@@ -783,26 +945,37 @@
     </div>
     <div class="ticket-section" id="ticket20">
       <h2><center>Auto Compensation Credit</center></h2>
-      <p>
-        Thank you for contacting Plusnet today.<br /><br />
-        I am sorry for the inconvenience this may have caused.<br /><br />
+      <button
+        class="copy-button"
+        id="copy-button20"
+        onclick="copyToClipboard('ticket-content20', 'copy-button20')"
+      >
+        Copy
+      </button>
 
-        <u>The details of your Compensation credit are as follows:</u
+      <p id="ticket-content20">
+        <br />
+        Thank you for contacting Plusnet today. I am sorry for the inconvenience
+        this may have caused.<br /><br />
+
+        The details of your<b> Compensation credit </b>are as follows:<br /><br />
+
+        <b
+          >• Compensation Credit for : Delayed loss of service repair (Total
+          Loss of Service) / Delayed Provisioning<br /><br />
+          • Total Days Eligible : XX<br /><br />
+          • Credit Amount : £AMOUNT</b
         ><br /><br />
 
-        • <b>Compensation Credit for :</b> Delayed loss of service repair (Total
-        Loss of Service) / Delayed Provisioning<br /><br />
-        • <b>Total Days Eligible : </b>XX<br /><br />
-        • <b>Credit Amount :</b> £AMOUNT<br /><br />
-
-        <u>Please Note:</u><br /><br />
+        <u>Please Note :</u>
         This credit will apply to your next month's bill, so you’ll see it
         reflected there.<br /><br />
 
         Thank you for your patience!<br /><br /><br /><br /><br /><br />
+      </p>
 
-        <b>** INTERNAL **</b><br /><br />Auto Compensation Amount per Day<br /><br />
-
+      <b>** INTERNAL **</b><br /><br />Auto Compensation Amount per Day<br /><br />
+      <p>
         <strong>2024</strong><br /><br />
         • Delayed Repair - Total Loss of Service: £9.76<br />
         • Missing Appointment: £30.49<br />
@@ -817,33 +990,65 @@
 
     <div class="ticket-section" id="ticket21">
       <h2><center>Account Access Ticket</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button21"
+        onclick="copyToClipboard('ticket-content21', 'copy-button21')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content21">
+        <br />
         <b>** INTERNAL **</b><br /><br />
 
         I have accessed the account to assist a colleague or as part of an
         ongoing investigation.<br /><br />
         No further changes have been made.<br /><br />
-        <h2><center>General Account Query</center></h2>
-        <b>** INTERNAL **</b><br /><br />
-    The customer has contacted us for a general account query related to:<br /><br />
+      </p>
 
-    • Final refund bill<br />
-    • Call charges<br />
-    • Contract end date<br />
-    • Contract price<br />
-    • Early Termination Fee (ETF)<br /><br />
+      <h2><center>General Account Query</center></h2>
+      <button
+        class="copy-button"
+        id="copy-button25"
+        onclick="copyToClipboard('ticket-content25', 'copy-button25')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content25">
+        <br />
+        <b>** INTERNAL **</b><br /><br />
+        The customer has contacted us for a general account query related to:<br /><br />
+
+        • Final refund bill<br />
+        • Call charges<br />
+        • Contract end date<br />
+        • Contract price<br />
+        • Early Termination Fee (ETF)<br /><br />
+
+        No changes have been made.
       </p>
     </div>
     <div class="ticket-section" id="ticket22">
       <h2><center>Opening Complaint Ticket</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button22"
+        onclick="copyToClipboard('ticket-content22', 'copy-button22')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content22">
+        <br />
         Thank you for contacting Plusnet today. I am sorry for the inconvenience
         this may have caused. <br /><br />
         We take your concerns seriously and have opened a complaint regarding
         your account.<br /><br />
 
         <u>Reason for Complaint:</u><br /><br />
-        • <br /><br /><br /><br /><br />
+        • <br /><br /><br />
 
         We will investigate your complaint and keep you updated on the progress.
         Thank you for your patience and understanding.<br /><br />
@@ -852,11 +1057,20 @@
 
     <div class="ticket-section" id="ticket23">
       <h2><center>How to Return Plusnet Router</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button23"
+        onclick="copyToClipboard('ticket-content23', 'copy-button23')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content23">
+        <br />
         Thank you for contacting Plusnet today.<br /><br />
 
         As part of your account closure or equipment return process, you can
-        return our router <b>free of charge</b> via the Post Office.<br /><br />
+        <b>Return Router free of charge</b> via the Post Office.<br /><br />
 
         <u><b>Here’s how:</b></u
         ><br /><br />
@@ -880,7 +1094,16 @@
     </div>
     <div class="ticket-section" id="ticket24">
       <h2><center>Set Callback</center></h2>
-      <p>
+      <button
+        class="copy-button"
+        id="copy-button24"
+        onclick="copyToClipboard('ticket-content24', 'copy-button24')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content24">
+        <br />
         Thank you for contacting Plusnet today.<br /><br />
 
         As discussed, we have arranged a callback for you at your preferred
@@ -914,6 +1137,26 @@
         if (selectedTicket) {
           selectedTicket.style.display = "block";
         }
+      }
+
+      function copyToClipboard(ticketId, buttonId) {
+        const text = document.getElementById(ticketId).innerText; // Get only text
+        navigator.clipboard.writeText(text).then(
+          function () {
+            const button = document.getElementById(buttonId);
+            button.innerText = "Copied!";
+            button.classList.add("copied");
+
+            // Reset button text after 8 seconds
+            setTimeout(() => {
+              button.innerText = "Copy";
+              button.classList.remove("copied");
+            }, 5000);
+          },
+          function (err) {
+            console.error("Could not copy text: ", err);
+          }
+        );
       }
     </script>
   </body>
