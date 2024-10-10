@@ -236,7 +236,7 @@
 
         <div class="ticket">
           <a href="javascript:void(0)" onclick="showTicket('ticket22')"
-            >Opening Complaint</a
+            >Open / close Complaint</a
           >
         </div>
 
@@ -260,12 +260,13 @@
 
       <p id="ticket-content1">
         <br />
-
+        <b><u>• Payment Taken Successfully •</u></b
+        ><br /><br /><br />
         Thank you for contacting Plusnet today.<br /><br />
 
-        Following our conversation, I can confirm that we have<b>
-          successfully taken the outstanding payment </b
-        >on your account. The outstanding balance has now been cleared.<br /><br />
+        Following our conversation, I can confirm that we have successfully
+        taken the outstanding payment on your account. The outstanding balance
+        has now been cleared.<br /><br />
 
         <u>Please Note:</u><br /><br />
         <b>• Any account restrictions will be lifted within the next 4 hours.</b
@@ -725,20 +726,19 @@
 
       <p id="ticket-content13">
         <br />
-        Thank you for contacting Plusnet today.<br /><br />
 
-        We would like to inform you that your <b>call plan</b> has been updated.
-        <br /><br />
-
-        <u>New Call Plan Information:</u><br /><br />
-        • Your call plan has been <b>changed</b> to
-        <b>NAME_OF_NEW_CALL_PLAN</b>.<br />
-        • The new call plan will take effect from your next billing date.<br />
-        • Your next billing date will be <b>XXXXXX</b>.<br /><br />
+        Thank you for contacting Plusnet today. <br /><br />
+        Following our conversation, I can confirm that we have updated your<b>
+          Call plan.
+        </b>
+        The new call plan will take effect from your next billing date, which
+        will be
+        <b>xx/xx/2024.</b> <br /><br />
 
         • To know more about call plan and call charges :
-        https://www.plus.net/broadband/extras/call-plans/ and full tariff guide
-        on https://www.plus.net/help/legal/residential-phone-tariffs/<br /><br />
+        https://www.plus.net/broadband/extras/call-plans/ <br /><br />
+        • Full tariff guide on :
+        https://www.plus.net/help/legal/residential-phone-tariffs/<br /><br />
 
         If you have further questions, please give our team a call at 0330 123
         9123 or 0345 140 0200.<br /><br />
@@ -767,7 +767,7 @@
         <u>Please Note :</u>
         Any account restrictions will be lifted within the next 4 hours.<br /><br />
 
-        Thank you for your patience!<br /><br /><br /><br />
+        Thank you for your patience!<br /><br /><br />
 
         <b>** INTERNAL **</b><br /><br />
 
@@ -777,9 +777,9 @@
 
         <b>Reason:</b>
         The restriction was applied before the failed payment day 14.<br /><br />
-        The customer attempted to manually remove the restriction by selecting
-        'Click here to acknowledge and continue' or 'Click on remove restriction
-        temporarily,' but was unsuccessful.<br /><br />
+        The customer tried to remove the restriction by selecting 'Click here to
+        acknowledge and continue' or 'Click to temporarily remove restriction,'
+        but was unsuccessful. <br /><br />
       </p>
     </div>
 
@@ -1053,6 +1053,28 @@
         We will investigate your complaint and keep you updated on the progress.
         Thank you for your patience and understanding.<br /><br />
       </p>
+      <hr />
+      <!-- Closing Complaint -->
+      <h2 style="text-align: center">Closing Complaint</h2>
+      <button
+        class="copy-button"
+        id="copy-button27"
+        onclick="copyToClipboard('ticket-content27', 'copy-button27')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content27">
+        <br />
+        <b>I am sorry for the inconvenience this may have caused</b>, and I want
+        to thank you for your patience whilst we've investigated your issue with
+        <b>XXXXXXX</b>.<br /><br />
+        I'm emailing you today to let you know that <b>XXXXXXX</b>.
+        <br /><br /><br /><br />We believe we've now fully resolved your issue.
+        I'd like to thank you for your patience whilst we've dealt with it.<br /><br />
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />
+      </p>
     </div>
 
     <div class="ticket-section" id="ticket23">
@@ -1119,6 +1141,30 @@
 
         Thank you for your patience !<br /><br />
       </p>
+      <hr />
+      <h2><center>Follow-Up on Callback Attempt</center></h2>
+      <button
+        class="copy-button"
+        id="copy-button28"
+        onclick="copyToClipboard('ticket-content28', 'copy-button28')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content28">
+        <br />
+        Thank you for your time.<br /><br />
+
+        I attempted to call you at 0123456789 but could not connect, so I left a
+        voicemail.<br /><br />
+        I was reaching out regarding <b>XXXXXX</b>.<br /><br />
+        I will contact you again to resolve this matter.<br /><br />
+
+        I am sorry for any inconvenience this may have caused.<br /><br />
+
+        To add your valuable information regarding this issue on the Member
+        Center, please click on this link: https://www.plus.net/wizard/?p=search
+      </p>
     </div>
 
     <footer style="text-align: center; margin-top: 20px">
@@ -1151,7 +1197,7 @@
             setTimeout(() => {
               button.innerText = "Copy";
               button.classList.remove("copied");
-            }, 5000);
+            }, 8000);
           },
           function (err) {
             console.error("Could not copy text: ", err);
