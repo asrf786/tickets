@@ -36,6 +36,7 @@
       #cpi .ticket {
         border: 1px solid rgb(238, 111, 132);
       }
+      .outercolor{border: 1px solid rgb(238, 111, 132);}
       .ticket-section {
         display: none; /* Hide all ticket sections by default */
         margin-top: 20px;
@@ -125,6 +126,10 @@
         color: black;
         font-size: larger;
         font-weight: bolder;
+      }
+      #last_update{
+        color : green;
+        float: left;
       }
     </style>
   </head>
@@ -257,9 +262,9 @@
             >Set Callback</a
           >
         </div>
-        <div class="ticket">
+        <div class="ticket outercolor">
           <a href="javascript:void(0)" onclick="showTicket('ticket30')"
-            >Common Phrase</a
+            >Ticket to TDX / Cheque Refund</a
           >
         </div>
         
@@ -810,6 +815,10 @@
         <b>** INTERNAL **</b><br /><br />
         <b>Data Protection: Passed (Fully DPA) </b><br /><br />
         <br />
+        Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />
       </p>
     </div>
 
@@ -831,7 +840,12 @@
         As discussed, I have raised a <b>Call Listening Request</b> on your account. 
         Please allow 3 - 5 working days for the process to be completed, and we will notify you as soon as the call listening outcome is available.<br /><br />
 
-        Thank you for your cooperation !<br /><br /><br /><br />
+        Thank you for your cooperation !<br /><br />
+        Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />
+        <br /><br />
 </p>
         <button
         class="copy-button"
@@ -872,6 +886,11 @@
         Once we have heard back from them, we will be in touch.<br /><br />
 
         Thank you for your cooperation.<br /><br /><br />
+        Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />
+        <hr />
       </p>
       <h2>Email to "PNET Billing Operations" at pnetbillop@plus.net</h2>
       
@@ -921,6 +940,8 @@
         • Number : <br /><br />
         •<b> Reason for Escalation : </b><br /><br />
 
+        We will investigate your complaint and keep you updated on the progress.
+        Thank you for your patience and understanding.<br /><br />
       </p>
     </div>
     <div class="ticket-section" id="ticket19">
@@ -961,6 +982,10 @@
         • The card is declined.<br /><br />
 
         Thank you for your cooperation! <br /><br /><br />
+        Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />
       </p>
     </div>
     <div class="ticket-section" id="ticket20">
@@ -986,6 +1011,11 @@
         Please note, this credit will be added onto your next bill.<br /><br />
 
         Thank you for your understanding.<br /><br /><br />
+
+        Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br /><br />
         
         Ofcom website for automatic compensation : <b><a href="https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/costs-and-billing/automatic-compensation-need-know">https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/costs-and-billing/automatic-compensation-need-know</a></b><br /><br />
         Ofcom fairness policy :<b><a href="https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/policy/fairness-for-customers/fairness-commitments">https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/policy/fairness-for-customers/fairness-commitments</a></b> <br /><br />
@@ -1240,6 +1270,7 @@
     </button>
     <label id="result2025" class="cpi_result"></label>
     <br /><br />
+    <hr>
     <label for="amount2024">Enter Amount for 2024: </label>
     <input
       type="number"
@@ -1252,6 +1283,7 @@
     </button>
     <label id="result2024"  class="cpi_result"></label>
     <br /><br />
+    <hr>
     <label for="amount2023" >Enter Amount for 2023: </label>
     <input
       type="number"
@@ -1391,7 +1423,7 @@
     </div>
 
     <div class="ticket-section" id="ticket30">
-      <h2><center>Common Phrase</center></h2>
+      <h2>Cheque Refund</h2>
       <button
         class="copy-button"
         id="copy-button37"
@@ -1402,8 +1434,53 @@
 
       <p id="ticket-content37">
         <br />
-        Thank you for contacting Plusnet today.<br /><br />
+        <b>** INTERNAL **</b><br /><br />
+        
+        Can we please refund the Incorrect charges via Cheque? <br /><br />
+        • Refund amount : £AMOUNT<br /><br />
+        • Reason for refund: XXXXX<br /><br />
+        <br /><br />
+      </p>
+      <hr>
+      <h2>TDX to remove charges</h2>
+      <button
+        class="copy-button"
+        id="copy-button40"
+        onclick="copyToClipboard('ticket-content40', 'copy-button40')"
+      >
+        Copy
+      </button>
 
+      <p id="ticket-content40">
+        <br />
+        <b>** INTERNAL **</b><br /><br />
+        
+        Can we please remove the balance on this account ? <br /><br />
+        • Amount : £AMOUNT<br /><br />
+        • Reason : XXXXX<br /><br />
+        <br /><br />
+        
+      </p>
+      <hr>
+      <h2>TDX to recall from DCA</h2>
+      
+      <button
+        class="copy-button"
+        id="copy-button41"
+        onclick="copyToClipboard('ticket-content41', 'copy-button41')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content41">
+        <br />
+        <b>** INTERNAL **</b><br /><br />
+        
+        Can we please recall the account from DCA ? <br /><br />
+        • Amount : £AMOUNT<br /><br />
+        • Reason for recall : XXXXX<br /><br />
+        <br /><br />
+        
         
       </p>
       
@@ -1494,7 +1571,7 @@
 
 
     <footer style="text-align: center; margin-top: 20px">
-      Created By &copy; Ash (AshrafAli Abed) | Home Billing C, Leeds
+      <label id="last_update">Last Updated : 06th February 2025 </label> Created By &copy; Ash (AshrafAli Abed) | Home Billing C, Leeds
     </footer>
     <script>
       function showTicket(ticketId) {
@@ -1537,7 +1614,7 @@
           let cpiAmount = amount * rate;
           document.getElementById(
             resultId
-          ).innerText = `New Monthly Price: £${cpiAmount.toFixed(2)}`;
+          ).innerText = `New Monthly Price :   £${cpiAmount.toFixed(2)}`;
         } else {
           document.getElementById(resultId).innerText =
             "Please enter a valid amount.";
