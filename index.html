@@ -33,6 +33,9 @@
         border-radius: 10px;
         color: black;
       }
+      #cpi .ticket {
+        border: 1px solid rgb(238, 111, 132);
+      }
       .ticket-section {
         display: none; /* Hide all ticket sections by default */
         margin-top: 20px;
@@ -121,6 +124,11 @@
           >
         </div>
         <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket28')"
+            >Grace Period / Payment plan</a
+          >
+        </div>
+        <div class="ticket">
           <a href="javascript:void(0)" onclick="showTicket('ticket2')"
             >Credit</a
           >
@@ -151,11 +159,7 @@
             >DPA Failed</a
           >
         </div>
-        <div class="ticket">
-          <a href="javascript:void(0)" onclick="showTicket('ticket12')"
-            >Final Bill</a
-          >
-        </div>
+        
       </div>
       <div class="ticket-row">
         <div class="ticket">
@@ -168,7 +172,11 @@
             >Bill Date Change</a
           >
         </div>
-
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket29')"
+            >Call Credit Threshold</a
+          >
+        </div>
         <div class="ticket">
           <a href="javascript:void(0)" onclick="showTicket('ticket13')"
             >Call Plan Change</a
@@ -179,17 +187,12 @@
             >Proof Of Payment</a
           >
         </div>
-
         <div class="ticket">
-          <a href="javascript:void(0)" onclick="showTicket('ticket10')"
-            >DCA Contact Details</a
+          <a href="javascript:void(0)" onclick="showTicket('ticket12')"
+            >Final Bill</a
           >
         </div>
-        <div class="ticket">
-          <a href="javascript:void(0)" onclick="showTicket('ticket9')"
-            >CPI 2024</a
-          >
-        </div>
+        
         <div class="ticket">
           <a href="javascript:void(0)" onclick="showTicket('ticket23')"
             >Return Router</a
@@ -228,24 +231,70 @@
             >Blackhack Contact</a
           >
         </div>
-        <div class="ticket">
-          <a href="javascript:void(0)" onclick="showTicket('ticket18')"
-            >Manager Escalation</a
-          >
-        </div>
+        
 
         <div class="ticket">
-          <a href="javascript:void(0)" onclick="showTicket('ticket22')"
-            >Open / close Complaint</a
+          <a href="javascript:void(0)" onclick="showTicket('ticket10')"
+            >DCA Contact Details</a
           >
         </div>
-
+        
         <div class="ticket">
           <a href="javascript:void(0)" onclick="showTicket('ticket24')"
             >Set Callback</a
           >
         </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket30')"
+            >Common Phrase</a
+          >
+        </div>
+        
       </div>
+
+      <div class="ticket-row" id="cpi">
+       
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket32')"
+            >Pounds & Pence +£3</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket25')"
+            >CPI 2025 - 6.4%</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket26')"
+            >CPI Calculator</a
+          >
+        </div>
+
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket27')"
+            >CPI Escalation</a
+          >
+        </div>
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket18')"
+            >Manager Escalation</a
+          >
+        </div>
+      
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket22')"
+            >Opening Complaint</a
+          >
+        </div>
+        
+        <div class="ticket">
+          <a href="javascript:void(0)" onclick="showTicket('ticket31')"
+            >Compensation Amount</a
+          >
+        </div>
+        
+      </div>
+
     </div>
 
     <div class="ticket-section" id="ticket1">
@@ -275,55 +324,7 @@
         9123 or 0345 140 0200.<br /><br />
 
       </p>
-      <hr>
-      <h2>C11198 - Grace Period Added</h2>
-      <button
-        class="copy-button"
-        id="copy-button29"
-        onclick="copyToClipboard('ticket-content29', 'copy-button29')"
-      >
-        Copy
-      </button>
-
-      <p id="ticket-content29">
-        <br />
-
-        Thank you for your time on the phone today.<br /><br />
-
-        As per our conversation I have added a Grace Period till <b>XX/XX/XX</b>. You will recieve an e-mail Confirmation.<br /><br />
-        Please allow up to 4 hours for your internet to be active. Once active we are unable to add another grace period or payment plan for the following 6 months.<br /><br />
-        
-        Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
-
-        If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
-
-      </p>
-      <hr>
-      <h2>C11216 - Payment Plan Added</h2>
-      <button
-        class="copy-button"
-        id="copy-button30"
-        onclick="copyToClipboard('ticket-content30', 'copy-button30')"
-      >
-        Copy
-      </button>
-
-      <p id="ticket-content30">
-      <br />
-
-      Thank you for your time on the phone today.<br /><br />
-
-      As per our conversation I have added a Payment Plan. You will recieve an e-mail with a break down of the agreement.<br /><br />
-
-      Please allow upto 4 hours for your internet to be active. Once active we are unable to add another payment plan or grace period for the following 6 months.<br /><br />
       
-      Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
-
-      If you have further questions, please give our team a call at 0330 123 9123 or 0345 140 0200.<br /><br /><br /><br />
-
-      </p>
-
     </div>
 
     <div class="ticket-section" id="ticket2">
@@ -655,8 +656,8 @@
         <b>&lt;b&gt;******** Please do not reply to this email. ********&lt;/b&gt;</b
           ><br /><br /><br />
           
-        Click on this link to upload proof : <b><a href="https://www.plus.net/wizard/?p=search">
-          https://www.plus.net/wizard/?p=search.</a><br /><br /></b>
+        Click on this link to access your all open question directly : <b><a href="https://www.plus.net/wizard/?p=search">
+          https://www.plus.net/wizard/?p=search</a><br /><br /></b>
 
           
         You may send a mailed copy to:<br /><br />
@@ -818,7 +819,16 @@
         Please allow 3 - 5 working days for the process to be completed, and we will notify you as soon as the call listening outcome is available.<br /><br />
 
         Thank you for your cooperation !<br /><br /><br /><br />
+</p>
+        <button
+        class="copy-button"
+        id="copy-button15"
+        onclick="copyToClipboard('ticket-content35', 'copy-button35')"
+        >
+        Copy
+        </button>
 
+        <p id="ticket-content35">
         <b>** INTERNAL **</b><br /><br />
         *** Call Listen Request *** <br /><br />
         • SID : <br /><br />
@@ -830,7 +840,7 @@
     </div>
 
     <div class="ticket-section" id="ticket17">
-      <h2>C11202 - Reward Card Email (pnetbillop@plus.net)</h2>
+      <h2>C11202 - Reward Card Email </h2>
       <button
         class="copy-button"
         id="copy-button17"
@@ -850,8 +860,17 @@
 
         Thank you for your cooperation.<br /><br /><br />
       </p>
-      <hr>
-        <b>** INTERNAL **</b><br /><br />
+      <h2>Email to "PNET Billing Operations" at pnetbillop@plus.net</h2>
+      
+      <button
+        class="copy-button"
+        id="copy-button38"
+        onclick="copyToClipboard('ticket-content38', 'copy-button38')"
+      >
+        Copy
+      </button>
+      <p id="ticket-content38">
+        <br /><br />
         Hello,<br /><br />
 
         I have an escalation for a cash-back promotion offer. Here are the
@@ -865,7 +884,7 @@
         • My Team Leader's Name : <br /><br /><br />
 
         Thank you !
-      
+      </p>
     </div>
     <div class="ticket-section" id="ticket18">
       <h2>C11223 - Manager Escalation Request</h2>
@@ -879,10 +898,10 @@
 
       <p id="ticket-content18">
         <br />
-        Thank you for your time on the telephone today.<br /><br />
+        Thank you for your time on the telephone today. We are sorry for the inconvenience caused.<br /><br />
+        We take your concerns seriously and have opened a complaint regarding
+        your account.<br /><br />
 
-        We are sorry for the inconvenience caused.<br /><br />
-        
         As discussed I will now submit your <b>escalation request</b> for review, we will be contacting you again once we have completed this process as we attempt to resolve the situation.<br /><br />
         
         • Name : <br /><br />
@@ -963,34 +982,7 @@
 
         <br /><br /><br />
       </p>
-      <hr><br /><br />
-      <b>** INTERNAL - For Reference Only **</b><br /><br />
       
-        <h3>Auto Compensation Amount per Day</h3>
-        <p>
-      <table border="1">
-      <tr>
-        <th>Compensation For</th>
-        <th><h3>Year 2024</h3></th>
-        <th><h3>Year 2023</h3></th>
-      </tr>
-      <tr>
-      <td>Delayed Repair - Total Loss of Service</td>
-      <td><center><b>£9.76</b></center></td>
-      <td><center>£9.33</center></td>
-      </tr>
-      <tr>
-      <td>Missing Appointment</td>
-      <td><center><b>£30.49</b></center></td>
-      <td><center>£29.15</center></td>
-      </tr>
-      <tr>
-      <td>Delayed Provision</td>
-      <td><center><b>£6.10</b></center></td>
-      <td><center>£5.83</center></td>
-      </tr>
-      </table>  
-      </p>
     </div>
 
     <div class="ticket-section" id="ticket21">
@@ -1040,7 +1032,7 @@
         class="copy-button"
         id="copy-button22"
         onclick="copyToClipboard('ticket-content22', 'copy-button22')"
-      >
+      > 
         Copy
       </button>
 
@@ -1135,7 +1127,7 @@
         <u>Call-back Details:</u><br /><br />
         • <b>Contact Number:</b> XXXXX<br /><br />
         • <b>Date and Time:</b> XXXXX<br /><br />
-        • <b>Reason for Callback:</b> XXXXX<br /><br />
+        • <b>Reason for Call-back:</b> XXXXX<br /><br />
 
         We will be contacting you to assist with your query at the scheduled
         time.<br /><br />
@@ -1168,6 +1160,294 @@
         <a href="https://www.plus.net/wizard/?p=search"> https://www.plus.net/wizard/?p=search </a> 
       </p>
     </div>
+
+    <div class="ticket-section" id="ticket25">
+      <h3> <center>2025 = 6.4% , 2024 = 7.9% , 2023 = 14.4%</center></h3>
+      <hr>
+      <h2>Consumer Price Index (CPI)</h2>
+      
+      <button
+        class="copy-button"
+        id="copy-button32"
+        onclick="copyToClipboard('ticket-content32', 'copy-button32')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content32">
+        <br />
+        
+        Thank you for contacting Plusnet today. I am sorry for any inconvenience this may have caused.<br /><br />
+        I understand your concerns regarding the recent price increase.
+        Unfortunately, this change is due to company policy, and we are unable to prevent it. 
+        We appreciate your understanding.<br />&lt;b&gt;<br /><br />
+        
+        <b>
+        The 2025 increase for Plusnet services will be 6.4% for customers on CPI+ terms.<br /><br />
+        
+        You’ll see the price changes on your first bill from 31st March 2025.<br /><br />
+      </b>&lt;/b&gt;<br />
+
+      Why do we increase our prices?<br /><br />
+
+      Our annual price change helps us continue to invest to bring you a better, more reliable experience and the best value for your money. 
+      It’s also important as our own costs continue to increase, so the price change means we can continue to maintain the best networks and provide customer service in more ways than ever before.<br /><br />
+
+        What's CPI?<br /><br />
+        The Consumer Price Index (CPI) rate is a figure released by the Office for National Statistics. 
+        The CPI is used for purposes such as uprating pensions, wages and benefits and can help in the understanding of inflation on family budgets. 
+        CPI measures the average price change as a percentage for a basket of 700 different goods and services which households buy.<br /><br />
+        
+        All accounts in scope will have an increase applied after 31st March 2025, based on the December CPI rate of 2.50% plus an additional 3.90%, resulting in a total increase of 6.4%, as confirmed by the Office for National Statistics.<br /><br />
+
+        You’ll find more information on annual price changes at : <b><a href="https://www.plus.net/help/legal/cpi-plus-guide/">https://www.plus.net/help/legal/cpi-plus-guide/</a></b> <br /><br /><br />
+        
+        Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />         
+      </p>
+      
+    </div>
+
+    <div class="ticket-section" id="ticket26">
+      <h2><center>CPI Calculator</center></h2>
+      <button
+        class="copy-button"
+        id="copy-button33"
+        onclick="copyToClipboard('ticket-content33', 'copy-button33')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content33">
+        <br />
+        Thank you for contacting Plusnet today.<br /><br />
+
+        
+      </p>
+      
+    </div>
+
+    <div class="ticket-section" id="ticket27">
+      <h2><center>CPI Escalation Ticket</center></h2>
+      <button
+        class="copy-button"
+        id="copy-button34"
+        onclick="copyToClipboard('ticket-content34', 'copy-button34')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content34">
+        <br />
+        Thank you for your time on the telephone today. We are sorry for the inconvenience caused.<br /><br />
+        
+        I understand your concerns regarding the recent price increase.
+        Unfortunately, this change is due to company policy, and we are unable to prevent it. 
+        We take your concerns seriously and have opened a complaint regarding
+        your account.<br /><br />
+        
+
+        As discussed I will now submit your <b>escalation request</b> for review, we will be contacting you again once we have completed this process as we attempt to resolve the situation.<br /><br />
+        
+        • Name : <br /><br />
+        • Number : <br /><br />
+        •<b> Reason for Escalation : Annual Price Changes</b><br /><br />
+
+        We will investigate your complaint and keep you updated on the progress. 
+        Thank you for your patience and understanding.<br /><br />
+
+      </p>
+      
+    </div>
+
+    <div class="ticket-section" id="ticket28">
+      
+      <h2>C11198 - Grace Period Added</h2>
+      <button
+        class="copy-button"
+        id="copy-button29"
+        onclick="copyToClipboard('ticket-content29', 'copy-button29')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content29">
+        <br />
+
+        Thank you for your time on the phone today.<br /><br />
+
+        As per our conversation I have added a Grace Period till <b>XX/XX/XX</b>. You will recieve an e-mail Confirmation.<br /><br />
+        Please allow up to 4 hours for your internet to be active. Once active we are unable to add another grace period or payment plan for the following 6 months.<br /><br />
+        
+        Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
+
+        If you have further questions, please give our team a call at 0330 123
+        9123 or 0345 140 0200.<br /><br />
+
+      </p>
+      <hr>
+      <h2>C11216 - Payment Plan Added</h2>
+      <button
+        class="copy-button"
+        id="copy-button30"
+        onclick="copyToClipboard('ticket-content30', 'copy-button30')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content30">
+      <br />
+
+      Thank you for your time on the phone today.<br /><br />
+
+      As per our conversation I have added a Payment Plan. You will recieve an e-mail with a break down of the agreement.<br /><br />
+
+      Please allow upto 4 hours for your internet to be active. Once active we are unable to add another payment plan or grace period for the following 6 months.<br /><br />
+      
+      Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
+
+      If you have further questions, please give our team a call at 0330 123 9123 or 0345 140 0200.<br /><br /><br /><br />
+
+      </p>
+
+
+      
+    </div>
+
+    <div class="ticket-section" id="ticket29">
+      <h2><center>Call Credit threshold</center></h2>
+      <button
+        class="copy-button"
+        id="copy-button36"
+        onclick="copyToClipboard('ticket-content36', 'copy-button36')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content36">
+        <br />
+
+      Thank you for contacting Plusnet today. I am sorry for any inconvenience this may have caused.<br /><br />
+      As discussed, A credit threshold is a spending threshold on your account that helps prevent you spending more than you want to on calls that aren't included in your call plan.<br /><br />
+      Every time you make a call, we take the amount it costs from your credit threshold and add it to your next bill. Then, at the end of the month, you pay for the calls you've made. We reset your credit limit on your invoice date.<br /><br />
+      You can check more details about call credit threshold by going to : <b><a href="https://www.plus.net/help/phone/about-phone-credit/">https://www.plus.net/help/phone/about-phone-credit/</a></b> <br /><br />
+          
+
+      Service numbers : <br /> <br />
+      The charge for calls to service numbers beginning 084, 087, 09 and 118 consists of a 9.58p per minute access charge from Plusnet, plus a service charge set by the company you called.<br /><br />
+              
+      Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
+
+      If you have further questions, please give our team a call at 0330 123
+      9123 or 0345 140 0200.<br /><br />
+      </p>
+      
+    </div>
+
+    <div class="ticket-section" id="ticket30">
+      <h2><center>Common Phrase</center></h2>
+      <button
+        class="copy-button"
+        id="copy-button37"
+        onclick="copyToClipboard('ticket-content37', 'copy-button37')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content37">
+        <br />
+        Thank you for contacting Plusnet today.<br /><br />
+
+        
+      </p>
+      
+    </div>
+
+    <div class="ticket-section" id="ticket31">
+      <h2><center>Auto Compensation Amount per Day</center></h2>
+      
+      <p>
+       <br /> <br />
+        <p> 
+      <table border="1">
+      <tr>
+        <th>Compensation For</th>
+        <th><h3> Year 2025 </h3></th>
+        <th><h3> Year 2024 </h3></th>
+        <th><h3> Year 2023 </h3></th>
+      </tr>
+      <tr>
+      <td> Delayed Repair - Total Loss of Service  </td>
+      <td><center><b> Update Soon </b></center></td>
+      <td><center><b> £9.76 </b></center></td>
+      <td><center> £9.33 </center></td>
+      </tr>
+      <tr>
+      <td>Missing Appointment</td>
+      <td><center><b> Update Soon </b></center></td>
+      <td><center><b> £30.49 </b></center></td>
+      <td><center> £29.15 </center></td>
+      </tr>
+      <tr>
+      <td> Delayed Provision </td>
+      <td><center><b> Update Soon </b></center></td>
+      <td><center><b> £6.10 </b></center></td>
+      <td><center> £5.83 </center></td>
+      </tr>
+      </table>  
+      </p>
+      </p>
+      
+    </div>
+
+    <div class="ticket-section" id="ticket32">
+      <h2><center>Pounds and Pence (P & P) +£3 per month</center></h2>
+      <button
+        class="copy-button"
+        id="copy-button39"
+        onclick="copyToClipboard('ticket-content39', 'copy-button39')"
+      >
+        Copy
+      </button>
+
+      <p id="ticket-content39">
+        <br />              
+              
+      Thank you for contacting Plusnet today. I am sorry for any inconvenience this may have caused.<br /><br />
+
+      I understand your concerns regarding the recent price increase. Unfortunately, this change is due to company policy, and we are unable to prevent it. We appreciate your understanding.<br /><br />
+      From 11th July 2024, annual prices changes will be in pounds and pence, so you can have certainty when it comes to the cost of our products and services from year to year.<br /><br />
+
+      Any planned increases will be set out in pounds and pence and will be applied each 31st March, starting in 2025. These will apply to new and existing customers who take out new contracts after 11th July 2024 and be clearly shown when customers sign up or renew their contract.<br /><br />
+      
+      <b>
+
+        Annual price increase from 31 March 2025 will be +£3 per month for new contracts after 11th July 2024. <br /><br />
+  
+        You’ll see the price changes on your first bill from 31st March 2025.<br /><br />
+      </b>
+      Why do we increase our prices?<br /><br />
+
+      Our annual price change helps us continue to invest to bring you a better, more reliable experience and the best value for your money. 
+      It’s also important as our own costs continue to increase, so the price change means we can continue to maintain the best networks and provide customer service in more ways than ever before.<br /><br />
+
+
+      We think that our new pricing model will be much clearer for customers and gives them more certainty on what their price change will be. This approach also aligns our pricing with Ofcom’s approach  recommendation on mid-contract price rises.<br /><br />
+      You’ll find more information on annual price changes at : <b><a href="https://www.plus.net/help/legal/about-annual-price-changes/">https://www.plus.net/help/legal/about-annual-price-changes/</a></b> <br /><br /><br />
+        
+      Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
+
+      If you have further questions, please give our team a call at 0330 123
+      9123 or 0345 140 0200.<br /><br />
+
+
+
+      </p>
+      
+    </div>
+
 
     <footer style="text-align: center; margin-top: 20px">
       Created By &copy; Ash (AshrafAli Abed) | Home Billing C, Leeds
