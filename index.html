@@ -82,7 +82,7 @@
       .ticket a:hover {
         background-color: #d0d0d0; /* Background color on hover */
       } /* Default button style */
-      .copy-button {
+      .copy-button,#cpi_button {
         background-color: #007bff; /* Blue background */
         color: white; /* White text */
         border: none; /* No border */
@@ -94,7 +94,7 @@
       }
 
       /* Hover effect */
-      .copy-button:hover {
+      .copy-button:hover , #cpi_button:hover {
         /*background-color: #0056b3;  Darker blue on hover */
         transform: scale(1.05); /* Slightly enlarge on hover */
       }
@@ -112,6 +112,19 @@
         padding: 10px 0;
         margin-top: auto; /* This ensures the footer stays at the bottom */
         position: relative;
+      }
+
+      input,
+      #cpi_button {
+        margin: 20px;
+        padding: 10px;
+        font-size: 16px;
+      
+      }
+      .cpi_result{
+        color: black;
+        font-size: larger;
+        font-weight: bolder;
       }
     </style>
   </head>
@@ -1212,17 +1225,48 @@
 
     <div class="ticket-section" id="ticket26">
       <h2><center>CPI Calculator</center></h2>
-      <button
-        class="copy-button"
-        id="copy-button33"
-        onclick="copyToClipboard('ticket-content33', 'copy-button33')"
-      >
-        Copy
-      </button>
-
+    
       <p id="ticket-content33">
-        <br />
-        Thank you for contacting Plusnet today.<br /><br />
+    
+    <label for="amount2025">Enter Amount for 2025: </label>
+    <input
+      type="number"
+      id="amount2025"
+      placeholder="Enter amount"
+      step="0.01"
+    />
+    <button id="cpi_button" onclick="calculateCPI(1.064, 'amount2025', 'result2025')">
+      Calculate for 2025 (6.4%)
+    </button>
+    <label id="result2025" class="cpi_result"></label>
+    <br /><br />
+    <label for="amount2024">Enter Amount for 2024: </label>
+    <input
+      type="number"
+      id="amount2024"
+      placeholder="Enter amount"
+      step="0.01"
+    />
+    <button  id="cpi_button" onclick="calculateCPI(1.079, 'amount2024', 'result2024')">
+      Calculate for 2024 (7.9%)
+    </button>
+    <label id="result2024"  class="cpi_result"></label>
+    <br /><br />
+    <label for="amount2023" >Enter Amount for 2023: </label>
+    <input
+      type="number"
+      id="amount2023"
+      placeholder="Enter amount"
+      step="0.01"
+    />
+    <button  id="cpi_button" onclick="calculateCPI(1.144, 'amount2023', 'result2023')">
+      Calculate for 2023 (14.4%)
+    </button>
+    <label id="result2023" class="cpi_result"></label>
+    <br /><br />
+
+    <button  id="cpi_button" onclick="clearResults()">Clear Results</button>
+
 
         
       </p>
@@ -1485,6 +1529,29 @@
             console.error("Could not copy text: ", err);
           }
         );
+      }
+
+      function calculateCPI(rate, inputId, resultId) {
+        let amount = parseFloat(document.getElementById(inputId).value);
+        if (!isNaN(amount)) {
+          let cpiAmount = amount * rate;
+          document.getElementById(
+            resultId
+          ).innerText = `New Monthly Price: £${cpiAmount.toFixed(2)}`;
+        } else {
+          document.getElementById(resultId).innerText =
+            "Please enter a valid amount.";
+        }
+      }
+
+      function clearResults() {
+        document.getElementById("result2025").innerText = "";
+        document.getElementById("result2024").innerText = "";
+        document.getElementById("result2023").innerText = "";
+
+        document.getElementById("amount2025").value = "";
+        document.getElementById("amount2024").value = "";
+        document.getElementById("amount2023").value = "";
       }
     </script>
   </body>
