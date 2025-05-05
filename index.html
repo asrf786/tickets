@@ -36,7 +36,10 @@
       #cpi .ticket {
         border: 1px solid rgb(238, 111, 132);
       }
-      .outercolor{border: 1px solid rgb(238, 111, 132);}
+      .outercolor{
+        border: 1px solid rgb(245, 115, 115);
+        background-color: #cef3d1;
+      }
       .ticket-section {
         display: none; /* Hide all ticket sections by default */
         margin-top: 20px;
@@ -129,13 +132,62 @@
       }
       #last_update{
         color : green;
-        float: left;
+        
       }
 
       .bold_words{
         font-weight: bolder;
         color: red;
       }
+
+      .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px; /* space between columns */
+    }
+
+    .entry {
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .entry:hover {
+      background-color: #e8f5e9;
+    }
+
+    .code {
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    .desc {
+      margin-top: 5px;
+    }
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      
+    }
+    th, td {
+      padding: 8px;
+      vertical-align: top;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #f198db;
+      
+      text-align: left;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    tr:hover {
+      background-color: #e8f5e9;
+    }
+
     </style>
   </head>
   <body>
@@ -267,7 +319,7 @@
             >Set Callback</a
           >
         </div>
-        <div class="ticket outercolor">
+        <div class="ticket">
           <a href="javascript:void(0)" onclick="showTicket('ticket30')"
             >Ticket to TDX / Cheque Refund</a
           >
@@ -275,8 +327,13 @@
         
       </div>
 
-      <div class="ticket-row" id="cpi">
+      <div class="ticket-row">
        
+        <div class="ticket outercolor">
+          <a href="javascript:void(0)" onclick="showTicket('ticket34')"
+            >Quick Ticket ID</a
+          >
+        </div>
         <div class="ticket">
           <a href="javascript:void(0)" onclick="showTicket('ticket32')"
             >Pounds & Pence +£3</a
@@ -310,7 +367,7 @@
           >
         </div>
         
-        <div class="ticket">
+        <div class="ticket outercolor">
           <a href="javascript:void(0)" onclick="showTicket('ticket31')"
             >Compensation Amount</a
           >
@@ -344,7 +401,7 @@
         Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
 
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
+        9123 .<br /><br />
 
       </p>
       
@@ -379,7 +436,7 @@
 
         Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br /><br /><br />
+        9123 .<br /><br /><br /><br />
 
       </p>
     </div>
@@ -413,7 +470,7 @@
 
         Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
+        9123 .<br /><br />
       </p>
       <hr>
       <button
@@ -461,18 +518,13 @@
         Thank you for contacting Plusnet today. I am sorry for the inconvenience
         this may have caused.<br /><br />
 
-        The discount has been applied to your account, and your monthly payable
-        amount is now: <b>£AMOUNT</b><br /><br />
-
-        <u>Please note:</u><br />&lt;b&gt;<br /><br />
-        •<b> The overcharge for this month due to the missing discount will be
-        automatically adjusted on your next month's bill, as the next month's
-        pro-rata discount bill will generate.</b><br /><br />&lt;/b&gt;<br />
+        The discount has been applied to your account, and from next bill onwards your monthly payable
+        amount is set to : <b>£AMOUNT</b> <br /><br />
 
         Thank you for your understanding.<br /><br />
         Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
+        9123 .<br /><br />
       </p>
     </div>
 
@@ -529,7 +581,7 @@
         Thank you for your understanding.<br /><br />
         Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
+        9123 .<br /><br />
       </p>
     </div>
 
@@ -554,7 +606,7 @@
         https://www.plus.net/member-centre/forgot-password/</a></b><br /><br />
 
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
+        9123 .<br /><br />
       </p>
     </div>
 
@@ -578,7 +630,7 @@
         
         Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
+        9123 .<br /><br />
       </p>
     </div>
     <div class="ticket-section" id="ticket9">
@@ -618,7 +670,7 @@
       </p>
       Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
       If you have further questions, please give our team a call at 0330 123
-      9123 or 0345 140 0200.<br /><br />
+      9123 .<br /><br />
     </div>
     <div class="ticket-section" id="ticket10">
       <h2><center>Account Sent to Debt Collection Agency</center></h2>
@@ -718,7 +770,7 @@
         The email asking for further details will be sent within the next 10 days after final bill generated.<br /><br /> 
         If the email link expires or not work, a cheque will be automatically sent after 14 days of final bill generate.<br /><br />
 
-        If you have further questions, please give our team a call at 0330 123 9123 or 0345 140 0200.
+        If you have further questions, please give our team a call at 0330 123 9123 .
       </p>
       <h2>Final Refund</h2>
       <button
@@ -765,7 +817,7 @@
           <a href="https://www.plus.net/broadband/extras/call-plans/">https://www.plus.net/broadband/extras/call-plans/ </a><br /><br />
           
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
+        9123 .<br /><br />
       </p>
     </div>
 
@@ -823,7 +875,7 @@
         Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
 
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
+        9123 .<br /><br />
       </p>
     </div>
 
@@ -849,7 +901,7 @@
         Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
 
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
+        9123 .<br /><br />
         <br /><br />
 </p>
         <button
@@ -894,7 +946,7 @@
         Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
 
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
+        9123 .<br /><br />
         <hr />
       </p>
       <h2>Email to "PNET Billing Operations" at pnetbillop@plus.net</h2>
@@ -990,7 +1042,7 @@
         Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
 
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
+        9123 .<br /><br />
       </p>
     </div>
     <div class="ticket-section" id="ticket20">
@@ -1020,7 +1072,7 @@
         Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
 
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br /><br />
+        9123 .<br /><br /><br />
         
         Ofcom website for automatic compensation : <b><a href="https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/costs-and-billing/automatic-compensation-need-know">https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/costs-and-billing/automatic-compensation-need-know</a></b><br /><br />
         Ofcom fairness policy :<b><a href="https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/policy/fairness-for-customers/fairness-commitments">https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/policy/fairness-for-customers/fairness-commitments</a></b> <br /><br />
@@ -1096,9 +1148,9 @@
         We will investigate your complaint and keep you updated on the progress.
         Thank you for your patience and understanding.<br /><br />
       </p>
-      <hr />
+      
       <!-- Closing Complaint -->
-      <h2 style="text-align: center">Closing Complaint</h2>
+      <!-- <h2 style="text-align: center">Closing Complaint</h2>
       <button
         class="copy-button"
         id="copy-button27"
@@ -1119,8 +1171,8 @@
 
         <br /><br />
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
-      </p>
+        9123 .<br /><br />
+      </p> -->
     </div>
 
     <div class="ticket-section" id="ticket23">
@@ -1152,7 +1204,7 @@
            https://www.plus.net/help/broadband/returns/</a></b><br /><br />
 
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
+        9123 .<br /><br />
       </p>
     </div>
     <div class="ticket-section" id="ticket24">
@@ -1253,7 +1305,7 @@
         Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
 
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />         
+        9123 .<br /><br />         
       </p>
       
     </div>
@@ -1365,7 +1417,7 @@
         Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
 
         If you have further questions, please give our team a call at 0330 123
-        9123 or 0345 140 0200.<br /><br />
+        9123 .<br /><br />
 
       </p>
       <hr>
@@ -1389,7 +1441,7 @@
       
       Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
 
-      If you have further questions, please give our team a call at 0330 123 9123 or 0345 140 0200.<br /><br /><br /><br />
+      If you have further questions, please give our team a call at 0330 123 9123 .<br /><br /><br /><br />
 
       </p>
 
@@ -1422,7 +1474,7 @@
       Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
 
       If you have further questions, please give our team a call at 0330 123
-      9123 or 0345 140 0200.<br /><br />
+      9123 .<br /><br />
       </p>
       
     </div>
@@ -1492,39 +1544,46 @@
     </div>
 
     <div class="ticket-section" id="ticket31">
-      <h2><center>Auto Compensation Amount per Day</center></h2>
+      <h2><center>Automatic Compensation Amount per Day</center></h2>
       
       <p>
-       <br /> <br />
-        <p> 
-      <table border="1">
+       
+  <table border="1">
+    <thead>
       <tr>
-        <th>Compensation For</th>
-        <th><h3> Year 2025 </h3></th>
-        <th><h3> Year 2024 </h3></th>
-        <th><h3> Year 2023 </h3></th>
+        <th>Compensation Type</th>
+        <th><center>From 1st April 2025</center></th>
+        <th>Year 2024</th>
+        <th>Year 2023</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Delayed Repair - Total Loss of Service</td>
+        <td><b><center>£9.98</center></b></td>
+        <td>£9.76</td>
+        <td>£9.33</td>
       </tr>
       <tr>
-      <td> Delayed Repair - Total Loss of Service  </td>
-      <td><center><b> £9.98 </b></center></td>
-      <td><center><b> £9.76 </b></center></td>
-      <td><center> £9.33 </center></td>
+        <td>Missing Appointment</td>
+        <td><b><center>£31.19</center></b></td>
+        <td>£30.49</td>
+        <td>£29.15</td>
       </tr>
       <tr>
-      <td>Missing Appointment</td>
-      <td><center><b> £31.19 </b></center></td>
-      <td><center><b> £30.49 </b></center></td>
-      <td><center> £29.15 </center></td>
+        <td>Delayed Provision / activation</td>
+        <td><b><center>£6.24</center></b></td>
+        <td>£6.10</td>
+        <td>£5.83</td>
       </tr>
-      <tr>
-      <td> Delayed Provision </td>
-      <td><center><b> £6.24 </b></center></td>
-      <td><center><b> £6.10 </b></center></td>
-      <td><center> £5.83 </center></td>
-      </tr>
-      </table>  
-      </p>
-      </p>
+      
+    </tbody>
+  </table>
+  <p>
+  Plusnet automatic compensation page :<b><a href="https://www.plus.net/help/legal/automatic-compensation/">
+    https://www.plus.net/help/legal/automatic-compensation/</a></b>
+     
+  </p>
       
     </div>
 
@@ -1569,13 +1628,71 @@
       Want to log into your account? Please go to <b><a href="https://www.plus.net/member-centre/login">https://www.plus.net/member-centre/login</a></b><br /><br />
 
       If you have further questions, please give our team a call at 0330 123
-      9123 or 0345 140 0200.<br /><br />
+      9123 .<br /><br />
 
 
 
       </p>
       
     </div>
+    <div class="ticket-section" id="ticket34">
+      <h2>Quick Ticket ID </h2>
+  
+      <p id="ticket-content43">
+              
+  
+        <div class="grid-container">
+          <div>
+            <div class="entry"><div class="code">C11226</div><div class="desc">Adding Auth User</div></div>
+            <div class="entry"><div class="code">C11187</div><div class="desc">Bereavement Call</div></div>
+            <div class="entry"><div class="code">C11188</div><div class="desc">Bereavement Call - Cancellation</div></div>
+            <div class="entry"><div class="code">C11189</div><div class="desc">Contact Details Confirmation/Update</div></div>
+            <div class="entry"><div class="code">C11227</div><div class="desc">Enabling Accounts</div></div>
+            <div class="entry"><div class="code">C11190</div><div class="desc">Fibre pro-rata charge</div></div>
+            <div class="entry"><div class="code">C11191</div><div class="desc">Incorrect Billing - Refund</div></div>
+            <div class="entry"><div class="code">C11192</div><div class="desc">Incorrect Billing - Credit</div></div>
+            <div class="entry"><div class="code">C11193</div><div class="desc">Invoice</div></div>
+            <div class="entry"><div class="code">C11194</div><div class="desc">Payment Details Update Details</div></div>
+            <div class="entry"><div class="code">C11196</div><div class="desc">Referrals</div></div>
+            <div class="entry"><div class="code">C11197</div><div class="desc">Referred to Customer Options</div></div>
+            <div class="entry"><div class="code">C11198</div><div class="desc">Added Grace Period</div></div>
+          </div>
+          <div>
+            <div class="entry"><div class="code">C11199</div><div class="desc">Autocomp info</div></div>
+            <div class="entry"><div class="code">C11200</div><div class="desc">Bank Statement</div></div>
+            <div class="entry"><div class="code">C11201</div><div class="desc">Bill Suspension - Account in Suspension</div></div>
+            <div class="entry"><div class="code">C11202</div><div class="desc">Cashback Escalation</div></div>
+            <div class="entry"><div class="code">C11203</div><div class="desc">Changed bill date</div></div>
+            <div class="entry"><div class="code">C11204</div><div class="desc">Chargebacks/Indemnities</div></div>
+            <div class="entry"><div class="code">C11205</div><div class="desc">Complaint Call Internal Transfer</div></div>
+            <div class="entry"><div class="code">C11236</div><div class="desc">Complaints - Blue Prism</div></div>
+            <div class="entry"><div class="code">C11207</div><div class="desc">DPA Failure</div></div>
+            <div class="entry"><div class="code">C11208</div><div class="desc">DSAR Request</div></div>
+            <div class="entry"><div class="code">C11209</div><div class="desc">Hardware - Router Return Instructions</div></div>
+            <div class="entry"><div class="code">C11210</div><div class="desc">Internal Transfer</div></div>
+            <div class="entry"><div class="code">C11211</div><div class="desc">No Grace Period</div></div>
+          </div>
+          <div>
+            <div class="entry"><div class="code">C11212</div><div class="desc">Nuisance Calls and TPS</div></div>
+            <div class="entry"><div class="code">C11213</div><div class="desc">Nuisance Calls renumbering</div></div>
+            <div class="entry"><div class="code">C11218</div><div class="desc">POA - Advocates - Further Validation Required</div></div>
+            <div class="entry"><div class="code">C11214</div><div class="desc">Paperless Company</div></div>
+            <div class="entry"><div class="code">C11215</div><div class="desc">Payment</div></div>
+            <div class="entry"><div class="code">C11216</div><div class="desc">Payment Plan</div></div>
+            <div class="entry"><div class="code">C11217</div><div class="desc">Phone Credit/Threshold</div></div>
+            <div class="entry"><div class="code">C11219</div><div class="desc">Sales Through Service - Security Removal</div></div>
+            <div class="entry"><div class="code">C11220</div><div class="desc">Sales Through Service - Security Up-sell</div></div>
+            <div class="entry"><div class="code">C11221</div><div class="desc">Scam Emails</div></div>
+            <div class="entry"><div class="code">C11222</div><div class="desc">Set Temporary Password for Customer</div></div>
+            <div class="entry"><div class="code">C11223</div><div class="desc">TL Esc - Appointment lead times</div></div>
+            <div class="entry"><div class="code">C11224</div><div class="desc">Updated Card payment</div></div>
+            <div class="entry"><div class="code">C11225</div><div class="desc">Value Add Transfer</div></div>
+          </div>
+        </div>
+
+      </p>
+      
+    </div><!-- 
 
     <div class="ticket-section" id="ticket33">
       <h2>C11236 - Blue Prism Complaints</h2>
@@ -1604,11 +1721,12 @@
 
       </p>
       
-    </div>
+    </div> -->
 
-
-    <footer style="text-align: center; margin-top: 20px">
-      <label id="last_update">Last Updated : 1st April 2025 </label> Created By &copy; Ash (AshrafAli Abed) | Home Billing C, Leeds
+    <footer style="text-align: center; margin-top: 20px; font-size: 1.2em; color: #555;">
+      <label id="last_update">Updated: 5th May 2025</label><br />
+      If you have any suggestions or corrections, please feel free to message me via Microsoft Teams.<br>
+      &copy; Ash (Ashrafali Abed) | Home Billing C, Leeds
     </footer>
     <script>
       function showTicket(ticketId) {
